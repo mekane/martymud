@@ -1,0 +1,6 @@
+*.o
+log/
+gods/
+player/
+src/rom
+
