@@ -25,6 +25,37 @@
 *	ROM license, in the file Rom24/doc/rom.license			   *
 ***************************************************************************/
 
+struct flag_type
+{
+    char *name;
+    int bit;
+    bool settable;
+};
+
+struct clan_type
+{
+    char        *name;
+    char        *who_name;
+    sh_int      hall;
+    bool        independent; /* true for loners */
+};
+
+struct position_type
+{
+    char *name;
+    char *short_name;
+};
+
+struct sex_type
+{
+    char *name;
+};
+
+struct size_type
+{
+    char *name;
+};
+
 /* game tables */
 extern	const	struct	clan_type	clan_table[MAX_CLAN];
 extern	const	struct	position_type	position_table[];
@@ -47,35 +78,4 @@ extern	const	struct	flag_type	container_flags[];
 extern	const	struct	flag_type	portal_flags[];
 extern	const	struct	flag_type	room_flags[];
 extern	const	struct	flag_type	exit_flags[];
-
-struct flag_type
-{
-    char *name;
-    int bit;
-    bool settable;
-};
-
-struct clan_type
-{
-    char 	*name;
-    char 	*who_name;
-    sh_int 	hall;
-    bool	independent; /* true for loners */
-};
-
-struct position_type
-{
-    char *name;
-    char *short_name;
-};
-
-struct sex_type
-{
-    char *name;
-};
-
-struct size_type
-{
-    char *name;
-};
 
