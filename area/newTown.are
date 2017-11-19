@@ -1,0 +1,597 @@
+#AREA
+newTown.are~
+New Town~
+{ 1 80} Lupo New Town~
+3000 3099
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+
+
+#3001
+
+fountain water~
+a fountain~
+A tall white fountain gushes forth here.~
+~
+fountain 0 0
+0 0 'water' 0 0
+0 0 0 G
+E
+fountain~
+A tall fountain made from white marble with almost no defects.  A circular 
+railing creates a shallow pool which the water cascades into. Situated on top 
+of a large block of marble is a carving of . Even the weather and time seem 
+not to have touched this carving. The water that flows from the fountain is 
+clear and seems to be good to drink.
+~
+
+#0
+
+
+
+#ROOMS
+
+#3000
+Town Square~
+You are in a wide open plaza in the center of town. The square is paved with
+large rectangular slabs of light-colored stone. There are stone benches to sit
+on, and a large fountain in the center of the square. There are sections of 
+grass that are preserved in small gardens between the paving, and some small
+trees provide shade during the heat of the day. Paths lead to the east, to the
+south, and to the west. To the north you can see the river bend north from it 
+eastward path.
+~
+0 0 1
+D1
+A path leads east to the merchant district~
+~
+0 -1 3000
+D2
+A path leads south down a tree lined avenue~
+~
+0 -1 3001
+D3
+A path leads west to a street~
+~
+0 -1 3000
+S
+
+#3001
+A tree lined avenue~
+You are on a street running north and south, lined on both sides with trees. 
+The street is clean, and the houses on both sides look nice and well kept. To
+the north you can see a wide open square, and this street continues to the 
+south.
+~
+0 0 1
+D0
+You see a wide open town square
+~
+square~
+0 -1 3000
+D2
+The avenue continues to the south
+~
+~
+0 -1 3002
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S 
+
+#3002
+A tree lined avenue~
+You are on a street running north and south, lined on both sides with trees. 
+The street is clean, and the houses on both sides look nice and well kept. The
+street continues to the north and to the south.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3001
+D2
+The avenue continues to the south
+~
+~
+0 -1 3003
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S 
+
+#3003
+A tree lined avenue~
+You are on a street running north and south, lined on both sides with trees. 
+The street is clean, and the houses on both sides look nice and well kept. The
+street continues to the north and to the south where it instersect with 
+another street.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3002
+D2
+The avenue continues to the south where it intersects with another street
+~
+intersection~
+0 -1 3004
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S 
+
+#3004
+An intersection in a tree lined avenue~
+You are at the meeting of an avenue running north and south with a street
+running east and west. The north to south avenue is lined on both sides with 
+trees. The streets are clean, and the houses in the area look nice and well 
+kept. The avenue continues to the north and to the south. The other street goes
+to the west, and to the east it ends at the entrance to a small temple.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3003
+D1
+You see the entrance to a small temple
+~
+temple~
+0 -1 3000
+D2
+The avenue continues to the south
+~
+~
+0 -1 3003
+D3
+A nice-lookng street leads west
+~
+street~
+0 -1 3009
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S 
+
+#3005
+A tree lined avenue~
+You are on a street running north and south, lined on both sides with trees. 
+The street is clean, and the houses on both sides look nice and well kept. The
+street continues to the north where it intersects with another street and to 
+the south.
+~
+0 0 1
+D0
+The avenue continues to the north where it intersects with another street
+~
+intersection~
+0 -1 3004
+D2
+The avenue continues to the south
+~
+~
+0 -1 3006
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S 
+
+#3006
+A tree lined avenue~
+You are on a street running north and south, lined on both sides with trees. 
+The street is clean, and the houses on both sides look nice and well kept. The
+street continues to the north and to the south.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3005
+D2
+The avenue continues to the south
+~
+~
+0 -1 3007
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S
+
+#3007
+A tree lined avenue~
+You are on a street running north and south, lined on both sides with trees. 
+The street is clean, and the houses on both sides look nice and well kept. The
+street continues to the north and to the south where it turns east to follow 
+the walls of the city.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3006
+D2
+The avenue continues to the south where it meets the city walls
+~
+~
+0 -1 3008
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+S
+
+#3008
+End of a tree lined avenue~
+You are at the southern end of a street running north and south, lined on both 
+sides with trees. To the south the city walls loom high and dark. The street 
+is clean, and the houses in the area look nice and well kept. The avenue
+continues to the north and a smaller street runs east to follow the wall.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3007
+D1
+A smaller street runs east along the wall
+~
+~
+0 -1 3000
+E
+trees~
+The trees are green and healthy. They provide shade and homes for birds and
+other small animals.
+~
+E
+houses~	
+The houses on this street are well constructed and well maintained. They are
+clean and in good repair. They are built close together, with little or no 
+space between each house. Most are two stories, with steeply slanted rooves.
+This is clearly a desirable area of town for people to live.
+~
+E
+wall walls~
+The walls built around the edge of the city protect it from attacks from the 
+outside. The walls are built tall and thick, so there is room for guards to 
+walk patrol along the top of it. It is built out of huge, solid blocks of a 
+dark stone that seems very hard.
+~
+S
+
+#3009
+A nice street~
+You are on a very nice street running east to west. The street is very clean 
+and well maintained. There are nice houses on both sides of the street that
+look very expensive. The street continues to the west and to the east where it
+intersects with a tree lined avenue. A similar street to this one runs south.
+~
+0 0 1
+D1
+To the east the nice street intersects with a tree lined avenue~
+~
+0 -1 3004
+D2
+Another nice street runs to the south
+~
+~
+0 -1 3000
+D3
+The nice street continues to the west
+~
+~
+0 -1 3010
+E
+houses~	
+The houses on this street are very well constructed and spotlessly maintained.
+They are very clean and in perfect repair. They each have their own grounds, 
+with gates surrounding lawns and gardens. Most are two stories, with steeply 
+slanted rooves. This is clearly the most desirable and expensive area of town 
+for people to live.
+~
+S
+
+#3010
+A nice street~
+You are on a very nice street running east to west. The street is very clean 
+and well maintained. There are nice houses on both sides of the street that
+look very expensive. The street continues to the west and to the east.
+~
+0 0 1
+D1
+The nice street continues to the east
+~
+~
+0 -1 3009
+D3
+The nice street continues to the west
+~
+~
+0 -1 3011
+E
+houses~	
+The houses on this street are very well constructed and spotlessly maintained.
+They are very clean and in perfect repair. They each have their own grounds, 
+with gates surrounding lawns and gardens. Most are two stories, with steeply 
+slanted rooves. This is clearly the most desirable and expensive area of town 
+for people to live.
+~
+S 
+
+#3011
+A nice street~
+You are on a very nice street running east to west. The street is very clean 
+and well maintained. There are nice houses on both sides of the street that
+look very expensive. The street continues to the west and to the east.
+~
+0 0 1
+D1
+The nice street continues to the east
+~
+~
+0 -1 3010
+D3
+The nice street continues to the west
+~
+~
+0 -1 3012
+E
+houses~	
+The houses on this street are very well constructed and spotlessly maintained.
+They are very clean and in perfect repair. They each have their own grounds, 
+with gates surrounding lawns and gardens. Most are two stories, with steeply 
+slanted rooves. This is clearly the most desirable and expensive area of town 
+for people to live.
+~
+S 
+
+#3012
+A nice street~
+You are on a very nice street running east to west. The street is very clean 
+and well maintained. There are nice houses on both sides of the street that
+look very expensive. The street continues to the west and to the east.
+~
+0 0 1
+D1
+The nice street continues to the east
+~
+~
+0 -1 3011
+D3
+The nice street continues to the west
+~
+~
+0 -1 3013
+E
+houses~	
+The houses on this street are very well constructed and spotlessly maintained.
+They are very clean and in perfect repair. They each have their own grounds, 
+with gates surrounding lawns and gardens. Most are two stories, with steeply 
+slanted rooves. This is clearly the most desirable and expensive area of town 
+for people to live.
+~
+S 
+
+#3013
+A nice street~
+You are on a very nice street running east to west. The street is very clean 
+and well maintained. There are nice houses on both sides of the street that
+look very expensive. The street continues to the east and to the west where it 
+turns north to follow the city wall. A similar street to this one runs south.
+~
+0 0 1
+D1
+The nice street continues to the east
+~
+~
+0 -1 3012
+D2
+Another nice street runs to the south
+~
+~
+0 -1 3000
+D3
+The nice street continues to the west where it meets the city wall
+~
+~
+0 -1 3014
+E
+houses~	
+The houses on this street are very well constructed and spotlessly maintained.
+They are very clean and in perfect repair. They each have their own grounds, 
+with gates surrounding lawns and gardens. Most are two stories, with steeply 
+slanted rooves. This is clearly the most desirable and expensive area of town 
+for people to live.
+~
+S
+
+#3014
+End of a nice street~
+You are at the western end of a very nice street going west to east. The 
+street is very clean and well maintained. There are nice houses on both sides 
+of the street that look very expensive. The street continues to the east. Here
+it meets up with the road that runs along the city wall, going north.
+~
+0 0 1
+D0
+The avenue continues to the north
+~
+~
+0 -1 3015
+D1
+A smaller street runs east along the wall
+~
+~
+0 -1 3013
+E
+houses~	
+The houses on this street are very well constructed and spotlessly maintained.
+They are very clean and in perfect repair. They each have their own grounds, 
+with gates surrounding lawns and gardens. Most are two stories, with steeply 
+slanted rooves. This is clearly the most desirable and expensive area of town 
+for people to live.
+~
+E
+wall walls~
+The walls built around the edge of the city protect it from attacks from the 
+outside. The walls are built tall and thick, so there is room for guards to 
+walk patrol along the top of it. It is built out of huge, solid blocks of a 
+dark stone that seems very hard.
+~
+S
+
+#3018
+Outside the Mansion~
+You are in front of the mayor's mansion. Directly before you, to the east
+is the entrance to the house. The two story building that houses the mayor
+and his household is one of the nicest residences in the city. It is
+decorated with the finest materials and the most expensive furnishings. Well
+tended gardens circle the house to the north and south. 
+~
+0 0 1
+D1
+The gilded door on front of you serves as the entrance to the mansion
+~
+entrance~
+1 -1 3019
+E
+door~
+The door is made from fine, imported wood and is trimmed with gleaming metal
+~
+E
+mansion house building~
+The mayor's house was built using the most expensive materials money could buy.
+Imported stones make up the walls, with exotic wood making up the rafters and 
+the roof.
+~
+S
+
+#3019
+The entrance to the mansion~
+You are in the front hallway of the mayor's mansion. The inside of the
+house is just as finely decorated as the outside. There are fine paintings
+hanging on the wall and expensive rugs on the floor. There are doors on the
+north and south sides of the hallway. The hallway leads east into the house
+and the door to the outside is west. 
+~
+0 0 0
+D0
+A plain, unadorned wooden door
+~
+~
+1 -1 3020
+D2
+A plain, unadorned wooden door
+~
+~
+1 -1 3021
+D3
+The gilded door leads outside of the mansion
+~
+exit~
+1 -1 3018
+E
+rugs~
+The rugs are made of finely woven fabric with intricate and colorful designs
+~
+E
+paintings~
+Various paintings line the wall. There is no consistent theme or style among 
+them, though they all look to be expensive.
+~
+S
+
+#0
+
+
+
+#SHOPS
+0
+
+
+
+#SPECIALS
+S
+
+
+
+#RESETS
+S
+
+
+
+#$

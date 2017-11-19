@@ -1,0 +1,1900 @@
+#AREA	
+gladiator.are~
+The Gladiator Arena~
+{15 50} Lupo    The Gladiator Arena~
+8000 8099
+
+
+#MOBILES
+
+#8000
+practice dummy~
+the practice dummy~
+A straw dummy hangs on a wooden pole here
+~
+A man-shaped bale of hay is here for your practicing convenience
+~
+unique~
+ABG 0 0 0
+80 80 1d1+7999 1d1+99 1d1+1 flbite
+0 0 0 0 
+0 ABCD 0 0
+stand stand none 0
+0 0 medium 0
+
+#8001
+gladiator rookie yellow man~
+The rookie gladiator~
+A man with a yellow spot on his chest is here
+~
+This man was recently bought from a slave trader to fight in the games. 
+His lack of fighting skill is displayed through the yellow paint on his
+tunic. He looks a little worse for the wear.
+~
+human~
+AGHW 0 0 0
+15 0 3d9+233 3d10+100 2d6+1 pound
+-1 -1 -1 9
+N 0 0 0
+stand stand male 1
+AHMV ABCDEFGHIJ medium 0
+
+#8002
+gladiator mid blue man~
+The mid-level gladiator~
+A man with a blue spot on his chest is here
+~
+This man was bought from a slave trader to fight in the games. He has 
+survived a few battles by now. His moderate fighting skill is displayed
+through the blue paint on his tunic. He has quite a few scars.
+~
+human~
+AGHW 0 -250 0
+21 0 4d10+363 3d10+100 4d4+5 pound
+-4 -4 -4 5
+CN 0 0 0
+stand stand male 2
+AHMV ABCDEFGHIJ medium 0
+
+#8003
+gladiator experienced red man~
+The experienced gladiator~
+A man with a red spot on his chest is here
+~
+This man was bought from a slave trader to fight in the games. He has lived
+through many battles. His advanced fighting skill is displayed through 
+the red paint on his tunic. He is covered with many scars.
+~
+human~
+AGHW 0 -500 0
+30 0 6d12+700 3d10+100 4d6+8 pound
+-8 -8 -8 0
+CFN 0 0 0
+stand stand male 1
+AHMV ABCDEFGHIJ medium 0
+
+#8004
+gladiator savage~
+the savage gladiator~
+A savage looking gladiator is here, waiting for the next battle
+~
+ He has been a fighter in the arena for as long as he can remember. He now
+takes part in the exhibitions whenever new slaves are brought in. His scars
+are uncountable.
+~
+human~
+AGHW 0 -850 0
+40 0 15d10+1850 1d3+97  4d8+13 none
+-12 -12 -12 -2 
+CFN 0 0 0
+stand stand male 5
+AHMV ABCDEFGHIJ medium 0
+
+#8005
+guard man praetoriate~
+The praetoriate guard~
+A member of the praetoriate guard is here, patroling the games
+~
+He is sworn to protect the emperor as one of his personal bodyguards. He is
+a highly skilled warrior who has trained for many years. He is dressed head
+to toe in black armor, with a long black cape flowing behind him. His helmet
+is adorned with purple plumage.
+~
+human~
+GTY 0 -750 0
+50 3 15d10+3850 4d10+100 5d8+19 none
+-17 -17 -17 -4
+EKU 0 E J
+stand stand male 150
+AHMV ABCDEFGHIJ medium 0
+
+#8006
+gladiator tigris~
+Tigris~
+The legendary Tigris is here
+~ 
+Tigris is an aged gladiator who came out of retirement for one last battle.
+He bears the scars of years in the arena, which turned him into the imposing
+warrior that he is. He wears a helm with a golden mask to cover his face.
+~
+human~
+BT H -900 802
+65 7 50d10+12000 4d15+100 8d8+36 none
+-32 -31 -33 -10
+CDHJKN 0 0 0
+stand stand male 2500
+AHMV ABCDEFGHIJ medium 0
+
+#8007
+tiger~
+The tiger~
+A large tiger is here, growling at you
+~
+A large tiger with orange fur and black stripes. It has big teeth.
+Very big teeth.
+~
+cat~
+BGU 0 0 802
+30 2 6d12+853 1d1+99 4d6+8 claw
+-9 -9 -9 0
+HR 0 0 0
+stand stand either 0
+AGHV ABCDEFHJKU large 0
+
+#8008
+emperor commodus man~
+Emperor Commodus~
+Emperor Commodus is here, watching the games
+~
+Emperor Commodus murdered his father and stole the throne unlawfully.
+He has re-instituted the games in an attempt to gain the people's favor.
+He is dressed in battle armor adorned with white feathers.
+~
+human~
+BGT H -1000 0
+70 5 50d10+15000 4d15+100 8d8+45 none
+-33 -36 -31 -9
+AEKU 0 0 0
+stand stand male 10000
+AHMV ABCDEFGHIJ medium 0
+
+#8009
+galdiator maxiumus man~
+Maximus the Gladiator~
+Maximus the gladiator is here, staring with an icy gaze
+~
+Maximus was betrayed by Commodus, who murdered Maximus' family. Maximus
+has sworn revenge. He is dressed in an ordinary slave's tunic, and he is
+wearing a leather breastplate adorned with horses.
+~
+human~
+ABGT HNV 1000 0
+75 10 50d10+20000 1d1+99 10d10+50 none
+-40 -40 -40 -15
+ACDFGK P 0 0
+stand stand male 1000
+AHMV ABCDEFGHIJ medium 0
+
+#8010
+wandering druid man~
+the wandering druid~
+An old man wearing druid's robes is here
+~
+This ancient druid has been wandering for years, aiding those in need
+and furthering the interests of his order.
+~
+human~
+Vdd DE 0 0
+60 2 50d10+10000 1d1+999 10d10+10 none
+-25 -25 -25 -5
+F AB 0 0
+stand stand male 10000
+AHMV ABCDEFGHIJ medium 0
+
+#0
+
+
+#OBJECTS
+
+#8001
+wood practice sword~
+a wooden practice sword~
+A wooden sword is sitting here~
+wood~
+weapon S AN
+sword 3 5 slash 0 
+15 40 500 P
+A
+18 1
+E
+sword~
+A wooden sword given to slaves who are net yet ready for the arena
+~
+
+#8002
+gladiator sword~
+a gladiator sword~
+A square-handled sword is sitting here~
+iron~
+weapon 0 AN
+sword 4 5 slash 0 
+20 60 2500 P
+A
+2 1
+A
+18 1
+A
+19 1
+E
+sword~
+A square-handled sword given to those who fight in the arena
+~
+
+#8003
+ivory sword~
+an ivory hilted sword~
+An ivory hilted sword is sitting here~
+iron~
+weapon 0 AN
+sword 6 6 slash 0 
+50 60 4500 P
+A
+2 1
+A
+18 3
+A
+19 3
+E
+sword~
+An ivory handled sword carried by the praetoriate guard
+~
+
+#8004
+breast plate black~
+a black breastplate~
+A black breastplate lies here~
+metal~
+armor J AD
+17 17 17 7 4
+50 450 8000 P
+A
+13 25
+
+#8005
+helm black~
+a black helm~
+A black helm with purple plumage sits here~
+metal~
+armor J AE
+12 12 12 4 1
+50 50 7000 P
+A
+13 15
+
+#8006
+shield tower black~
+a black tower shield~
+A huge black shield rests here~
+metal~
+armor J AJ
+14 15 15 8 4
+50 80 7000 P
+A
+13 25
+A
+20 -2
+
+#8007
+helm golden~
+a golden helm~
+A golden helm with a face mask is here~
+gold~
+armor 0 AE
+18 18 18 8 2
+65 100 11500 P
+A
+13 30
+A
+18 5
+
+#8008
+battle axe gold~
+a golden battleaxe~
+A golden battleaxe lies here~
+gold~
+weapon H AN
+axe 5 10 chop 0
+65 600 20000 P
+A
+18 4
+A
+19 6
+
+#8009
+white breast plate~ 
+a white breastplate~
+A white breastplate lies here~
+metal~
+armor JL AD
+23 23 23 15 4
+70 450 16500 P
+A
+2 2
+
+#8010
+perl spiral dagger~
+a spiral dagger~
+a pearly spiraled dagger lies here~
+pearl~
+weapon JL AN
+dagger 6 7 pierce H
+70 10 18000 P
+A
+18 4
+A
+19 2
+
+#8011
+emperor ring signet~
+the emperor's signet ring~
+a large ring of gold has been dropped here~
+gold~
+jewelry 0 AB
+0 0 0 0 0
+70 1 20000 P
+A
+19 4
+
+#8012
+leather breast plate~ 
+a leather breastplate~
+A leather breastplate adorned with horses lies here~
+leather~
+armor SKL AD
+40 40 40 25 3
+70 300 10000 P
+A
+1 2
+A
+2 2
+
+#8013
+leather bracer roman~
+a roman bracer~
+A leather wrist guard has been left here.~
+leather~
+armor SKLG AM
+15 15 15 8 0
+70 45 8500 P
+A
+19 4
+
+#8014
+axe savage~
+a savage axe~
+A nasty looking axe is sitting here~
+iron~
+weapon 0 AN
+axe 7 6 slash 0 
+40 120 4500 P
+A
+18 1
+A
+19 3
+E
+axe~
+This axe was wielded by a gladiator in the great arena. From the nothces, it
+looks like it has seen many battles.
+~
+
+#8015
+savage polearm~
+a savage polearm~
+A nasty looking polearm is sitting here~
+iron~
+weapon 0 AN
+polearm 7 7 cleave 0 
+40 300 4500 P
+A
+19 7
+E
+axe~
+This polearm was wielded by a gladiator in the great arena. From the notches,
+it looks like it has seen many battles.
+~
+
+#8016
+flail savage~
+a savage flail~
+A flail with three nasty looking spiked balls is sitting here~
+iron~
+weapon 0 AN
+flail 6 7 beating 0 
+40 90 4500 P
+A
+18 2
+A
+19 2
+E
+axe~
+This axe was wielded by a gladiator in the great arena. From the dents, it
+looks like it has seen many battles.
+~
+
+#8017
+good berry red~
+a goodberry~
+a small red berry has been left here
+~
+food~
+pill GNPS A
+30 'cure light' 'energize' 'refresh' ''
+16 1 750 P 
+#0
+
+#ROOMS
+#8001
+Northwest Corner~
+You are at the northwest corner of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues south and east.
+~
+0 D 1
+D1
+~
+~
+0 0 8002
+D2
+~
+~
+0 0 8032
+S
+#8002
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and east. To the south is a barracks.
+~
+0 D 1
+D1
+~
+~
+0 0 8003
+D2
+~
+~
+0 0 8033
+D3
+~
+~
+0 0 8001
+S
+#8003
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. 
+~
+0 D 1
+D1
+~
+~
+0 0 8004
+D3
+~
+~
+0 0 8002
+S
+#8004
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. 
+~
+0 D 1
+D1
+~
+~
+0 0 8005
+D3
+~
+~
+0 0 8003
+S
+#8005
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. To the south is a tunnel leading up into
+the light of the arena!
+~
+0 D 1
+D1
+~
+~
+0 0 8006
+D2
+~
+~
+0 0 8037
+D3
+~
+~
+0 0 8004
+S
+#8006
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. 
+~
+0 D 1
+D1
+~
+~
+0 0 8007
+D3
+~
+~
+0 0 8005
+S
+#8007
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. To the north is a tunnel leading to the 
+outside.
+~
+0 D 1
+D0
+~
+~
+0 0 8062
+D1
+~
+~
+0 0 8008
+D3
+~
+~
+0 0 8006
+S
+#8008
+North Tunnel~
+You are in the northern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. To the south is a barracks.
+~
+0 D 1
+D1
+~
+~
+0 0 8009
+D2
+~
+~
+0 0 8034
+D3
+~
+~
+0 0 8007
+S
+#8009
+Northeast Corner~
+You are at the northeest corner of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues south and west.
+~
+0 D 1
+D2
+~
+~
+0 0 8010
+D3
+~
+~
+0 0 8008
+S
+#8010
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south. To the west is a barracks.
+~
+0 D 1
+D0
+~
+~
+0 0 8009
+D2
+~
+~
+0 0 8011
+D3
+~
+~
+0 0 8034
+S
+#8011
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8010
+D2
+~
+~
+0 0 8012
+S
+#8012
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8011
+D2
+~
+~
+0 0 8013
+S
+#8013
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south. To the south is a tunnel leading up into
+the light of the arena!
+~
+0 D 1
+D0
+~
+~
+0 0 8012
+D2
+~
+~
+0 0 8014
+D3
+~
+~
+0 0 8052
+S
+#8014
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8013
+D2
+~
+~
+0 0 8015
+S
+#8015
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8014
+D2
+~
+~
+0 0 8016
+S
+#8016
+East Tunnel~
+You are in the eastern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south. To the west is a barracks.
+~
+0 D 1
+D0
+~
+~
+0 0 8015
+D2
+~
+~
+0 0 8017
+D3
+~
+~
+0 0 8035
+S
+#8017
+Southeast Corner~
+You are at the southeast corner of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and west.
+~
+0 D 1
+D0
+~
+~
+0 0 8016
+D3
+~
+~
+0 0 8018
+S
+#8018
+South Tunnel~
+You are in the souththern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. To the north is a barracks.
+~
+0 D 1
+D0
+~
+~
+0 0 8035
+D1
+~
+~
+0 0 8017
+D3
+~
+~
+0 0 8019
+S
+#8019
+South Tunnel~
+You are in the southern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west.
+~
+0 D 1
+D1
+~
+~
+0 0 8018
+D3
+~
+~
+0 0 8020
+S
+#8020
+South Tunnel~
+You are in the southern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west.
+~
+0 D 1
+D1
+~
+~
+0 0 8019
+D3
+~
+~
+0 0 8021
+S
+#8021
+South Tunnel~
+You are in the southern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. To the south is a tunnel leading up into
+the light of the arena!
+~
+0 D 1
+D0
+~
+~
+0 0 8061
+D1
+~
+~
+0 0 8020
+D3
+~
+~
+0 0 8022
+S
+#8022
+South Tunnel~
+You are in the southern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west.
+~
+0 D 1
+D1
+~
+~
+0 0 8021
+D3
+~
+~
+0 0 8023
+S
+#8023
+South Tunnel~
+You are in the southern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west.
+~
+0 D 1
+D1
+~
+~
+0 0 8022
+D3
+~
+~
+0 0 8024
+S
+#8024
+South Tunnel~
+You are in the southern part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues east and west. To the north is a barracks.
+~
+0 D 1
+D0
+~
+~
+0 0 8036
+D1
+~
+~
+0 0 8023
+D3
+~
+~
+0 0 8025
+S
+#8025
+Southwest Corner~
+You are at the southwest corner of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and east.
+~
+0 D 1
+D0
+~
+~
+0 0 8026
+D1
+~
+~
+0 0 8024
+S
+#8026
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south. To the east is a barracks.
+~
+0 D 1
+D0
+~
+~
+0 0 8027
+D1
+~
+~
+0 0 8036
+D2
+~
+~
+0 0 8025
+S
+#8027
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8028
+D2
+~
+~
+0 0 8026
+S
+#8028
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8029
+D2
+~
+~
+0 0 8027
+S
+#8029
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south. To the east is a tunnel leading up into
+the light of the arena!
+~
+0 D 1
+D0
+~
+~
+0 0 8030
+D1
+~
+~
+0 0 8046
+D2
+~
+~
+0 0 8028
+S
+#8030
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8031
+D2
+~
+~
+0 0 8029
+S
+#8031
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south.
+~
+0 D 1
+D0
+~
+~
+0 0 8032
+D2
+~
+~
+0 0 8030
+S
+#8032
+West Tunnel~
+You are in the western part of the tunnel underneath the arena. The air
+is thick with the smell of sweat and dirt. The walls are hewn from rough rock.
+The tunnel continues north and south. To the east is a barracks.
+~
+0 D 1
+D0
+~
+~
+0 0 8001
+D1
+~
+~
+0 0 8033
+D2
+~
+~
+0 0 8031
+S
+
+#8033
+Barracks~
+You are in a cramped barracks for housing the slaves who fight in the arena.
+There are crude mats on the floor, and tables with benches. The smell of 
+every person who has ever been quartered here seems to remain. The exits are
+to the north and west.
+~
+0 D 0
+D0
+~
+~
+0 0 8002
+D3
+~
+~
+0 0 8032
+H 115 M 110
+S
+#8034
+Barracks~
+You are in a cramped barracks for housing the slaves who fight in the arena.
+There are crude mats on the floor, and tables with benches. The smell of 
+every person who has ever been quartered here seems to remain. The exits are
+to the north and east.
+~
+0 D 0
+D0
+~
+~
+0 0 8008
+D1
+~
+~
+0 0 8010
+H 115 M 110
+S
+#8035
+Barracks~
+You are in a cramped barracks for housing the slaves who fight in the arena.
+There are crude mats on the floor, and tables with benches. The smell of 
+every person who has ever been quartered here seems to remain. The exits are
+to the east and south.
+~
+0 D 0
+D1
+~
+~
+0 0 8016
+D2
+~
+~
+0 0 8018
+H 115 M 110
+S
+#8036
+Barracks~
+You are in a cramped barracks for housing the slaves who fight in the arena.
+There are crude mats on the floor, and tables with benches. The smell of 
+every person who has ever been quartered here seems to remain. The exits are
+to the south and west.
+~
+0 D 0
+D2
+~
+~
+0 0 8024
+D3
+~
+~
+0 0 8026
+H 115 M 110
+S
+#8037
+Northern Tunnel~
+You are in a tunnel north of the arena, leading down into an underground area.
+To the south is the arena.
+~
+0 D 1
+D0
+~
+~
+0 0 8005
+D2
+~
+~
+0 0 8039
+S
+#8038
+Northern Arena~
+You are in the northern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the south.
+~
+0 0 0
+D1
+~
+~
+0 0 8039
+D2
+~
+~
+0 0 8042
+S
+#8039
+Northern Arena~
+You are in the northern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the south. To the north is the entrance to a tunnel out of the arena.
+~
+0 0 0
+D0
+~
+~
+0 0 8037
+D1
+~
+~
+0 0 8040
+D2
+~
+~
+0 0 8043
+D3
+~
+~
+0 0 8038
+S
+#8040
+Northern Arena~
+You are in the northern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the south.
+~
+0 0 0
+D2
+~
+~
+0 0 8044
+D3
+~
+~
+0 0 8039
+S
+#8041
+Western Arena~
+You are in the western section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the east.
+~
+0 0 0
+D1
+~
+~
+0 0 8042
+D2
+~
+~
+0 0 8047
+S
+#8042
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8038
+D1
+~
+~
+0 0 8043
+D2
+~
+~
+0 0 8048
+D3
+~
+~
+0 0 8041
+S
+#8043
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8039
+D1
+~
+~
+0 0 8044
+D2
+~
+~
+0 0 8049
+D3
+~
+~
+0 0 8042
+S
+#8044
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8040
+D1
+~
+~
+0 0 8045
+D2
+~
+~
+0 0 8050
+D3
+~
+~
+0 0 8043
+S
+#8045
+Eastern Arena~
+You are in the eastern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the west.
+~
+0 0 0
+D2
+~
+~
+0 0 8051
+D3
+~
+~
+0 0 8044
+S
+#8046
+Western Tunnel~
+You are in a tunnel west of the arena, leading down into an underground area.
+To the east is the arena.
+~
+0 D 1
+D1
+~
+~
+0 0 8047
+D3
+~
+~
+0 0 8029
+S
+#8047
+Western Arena~
+You are in the western section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the east. To the west is the entrance to a tunnel out of the arena.
+~
+0 0 0
+D0
+~
+~
+0 0 8041
+D1
+~
+~
+0 0 8048
+D2
+~
+~
+0 0 8053
+D3
+~
+~
+0 0 8046
+S
+#8048
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8042
+D1
+~
+~
+0 0 8049
+D2
+~
+~
+0 0 8054
+D3
+~
+~
+0 0 8047
+S
+#8049
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8043
+D1
+~
+~
+0 0 8050
+D2
+~
+~
+0 0 8055
+D3
+~
+~
+0 0 8048
+S
+#8050
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8044
+D1
+~
+~
+0 0 8051
+D2
+~
+~
+0 0 8056
+D3
+~
+~
+0 0 8049
+S
+#8051
+Eastern Arena~
+You are in the eastern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the west. To the east is the entrance to a tunnel out of the arena.
+~
+0 0 0
+D0
+~
+~
+0 0 8045
+D1
+~
+~
+0 0 8052
+D2
+~
+~
+0 0 8057
+D3
+~
+~
+0 0 8050
+S
+#8052
+Eastern Tunnel~
+You are in a tunnel north of the arena, leading down into an underground area.
+To the west is the arena.
+~
+0 D 1
+D1
+~
+~
+0 0 8013
+D3
+~
+~
+0 0 8051
+S
+#8053
+Western Arena~
+You are in the western section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the east.
+~
+0 0 0
+D0
+~
+~
+0 0 8047
+D1
+~
+~
+0 0 8054
+S
+#8054
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8048
+D1
+~
+~
+0 0 8055
+D2
+~
+~
+0 0 8058
+D3
+~
+~
+0 0 8053
+S
+#8055
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8049
+D1
+~
+~
+0 0 8056
+D2
+~
+~
+0 0 8059
+D3
+~
+~
+0 0 8054
+S
+#8056
+Center of the Arena~
+You are in the middle of the great arena. The spectator standss rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance.
+~
+0 0 0
+D0
+~
+~
+0 0 8050
+D1
+~
+~
+0 0 8057
+D2
+~
+~
+0 0 8060
+D3
+~
+~
+0 0 8055
+S
+#8057
+Eastern Arena~
+You are in the eastern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the west.
+~
+0 0 0
+D0
+~
+~
+0 0 8051
+D3
+~
+~
+0 0 8056
+S
+#8058
+Southern Arena~
+You are in the southern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the north.
+~
+0 0 0
+D0
+~
+~
+0 0 8054
+D1
+~
+~
+0 0 8059
+S
+#8059
+Southern Arena~
+You are in the southern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the south. To the south is the entrance to a tunnel out of the arena.
+~
+0 0 0
+D0
+~
+~
+0 0 8055
+D1
+~
+~
+0 0 8060
+D2
+~
+~
+0 0 8061
+D3
+~
+~
+0 0 8058
+S
+#8060
+Southern Arena~
+You are in the southern section of the great arena. The spectator stands rise 
+high into the air all around you. The ground is sandy and blood-stained. You 
+can hear the sounds of combat in the distance. The center of the arena is to
+the north.
+~
+0 0 0
+D0
+~
+~
+0 0 8056
+D3
+~
+~
+0 0 8059
+S
+#8061
+Southern Tunnel~
+You are in a tunnel south of the arena, leading down into an underground area.
+To the north is the arena.
+~
+0 D 1
+D0
+~
+~
+0 0 8059
+D2
+~
+~
+0 0 8021
+S
+#8062
+Tunnel~
+You are in a gently sloping tunnel leading down into the area beneath the 
+arena. The walls are rough hewn rock. The tunnel leads south into an 
+east-west tunnel, or north to the outside.
+~
+0 D 1
+D0
+~
+~
+0 0 8063 
+D2
+~
+~
+0 0 8007
+S
+#8063
+Desert Path~
+You are on a dusty path through the southern desert. The gladiator arena
+looms large in front of you. To the south is a tunnel which leads
+underneath the arena. New Thalos is to the north.
+~
+0 0 10
+D0
+~
+~
+0 0 8064
+D2
+~
+~
+0 0 8062
+S
+
+#8064
+Desert Path~
+You are on a dusty path through the southern desert. The gladiator arena
+can be seen in the distance to the south. The southern gates of New Thalos 
+are to the north.
+~
+0 0 10
+D0
+~
+~
+0 0 9511
+D2
+~
+~
+0 0 8063
+S
+
+#8000
+Lupo's Palace~
+You are up in heah!
+~
+0 0 0
+S
+
+#0
+
+
+#RESETS
+
+M 0 8001  25   8001 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8004 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8007 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8009 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8010 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8014 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8017 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8018 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8021 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8024 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8027 3   * yellow
+E 0 8001  -1   16       * practice sword
+
+M 0 8001  25   8030 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8031 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8033 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8034 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8037 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8011 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8014 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8017 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8020 3   * yellow
+E 0 8001  -1   16       * practice sword
+
+M 0 8001  25   8023 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8025 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8026 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8030 3   * yellow
+E 0 8001  -1   16       * practice sword
+M 0 8001  25   8046 3   * yellow
+E 0 8001  -1   16       * practice sword
+
+
+M 0 8002  20   8002 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8005 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8008 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8011 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8014 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8017 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8020 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8023 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8026 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8029 3   * blue
+E 0 8001  -1   16       * practice sword
+
+M 0 8002  20   8032 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8037 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8052 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8061 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8046 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8034 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8006 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8010 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8035 3   * blue
+E 0 8001  -1   16       * practice sword
+M 0 8002  20   8018 3   * blue
+E 0 8001  -1   16       * practice sword
+
+
+M 0 8003  15   8003 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8006 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8028 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8031 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8025 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8027 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8033 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8034 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8047 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8045 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8003 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8006 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8009 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8012 3   * red
+E 0 8002  -1   16       * sword
+M 0 8003  15   8033 3   * red
+E 0 8002  -1   16       * sword
+
+M 0 8004  10   8042 1   *gladiator
+E 0 8014  -1   16       *axe
+M 0 8004  10   8043 1   *gladiator
+E 0 8014  -1   16       *axe
+M 0 8004  10   8044 1   *gladiator
+E 0 8014  -1   16       *axe
+M 0 8004  10   8048 1   *gladiator
+E 0 8015  -1   16       *polearm
+M 0 8004  10   8050 1   *gladiator
+E 0 8015  -1   16       *polearm
+M 0 8004  10   8051 1   *gladiator
+E 0 8015  -1   16       *polearm
+M 0 8004  10   8054 1   *gladiator
+E 0 8016  -1   16       *flail
+M 0 8004  10   8055 1   *gladiator
+E 0 8016  -1   16       *flail
+M 0 8004  10   8056 1   *gladiator
+E 0 8016  -1   16       *flail
+M 0 8004  10   8059 1   *gladiator
+E 0 8002  -1   16       *sword
+
+
+M 0 8005  12   8038  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8039  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8040  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8041  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8045  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8047  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8051  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8053  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8057  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8058  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8059  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+M 0 8005  12   8060  1	* praetoriate
+E 0 8003  -1   16       * sword
+E 0 8004  -1   5        * black plate
+E 0 8005  -1   6        * black helm
+E 0 8006  -1   11       * black shield
+
+M 0 8006  1  8042  1    * Tigris
+E 0 8003  -1  16        * sword
+E 0 8008  10  19        * gold axe
+E 0 8007  10  6         * gold helm
+
+M 0 8007  4  8042  1    * tiger
+M 0 8007  4  8044  1    * tiger
+M 0 8007  4  8054  1    * tiger
+M 0 8007  4  8056  1    * tiger
+
+M 0 8008  1  8049  1    * Commodus
+E 0 8003  -1  16        * sword
+E 0 8009  8   5         * white plate
+E 0 8010  8   19        * dagger
+E 0 8011  8   2         * ring         
+
+M 0 8009  1  8049  1    * Maxiumus
+E 0 8003  -1  16        * sword
+E 0 8012  8   5         * leather breastplate
+E 0 8013  8   15        * roman bracer
+
+
+S
+
+
+
+#SHOPS
+8010 4 10 26 0 0 115 85 0 24  *druid
+0
+
+
+
+#SPECIALS
+S
+
+
+
+#$

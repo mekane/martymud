@@ -1,0 +1,76 @@
+#AREA
+temple.are~
+Temple~
+{ 0 80} Lupo    Temple~
+8800 8899
+
+#MOBILES
+
+#8800
+serpent fire~
+the serpentine fire~
+a serpent-shaped pilliar of fire burns here
+~
+a churning, writhing shaft of flames resembling a serpent
+~
+skeleton~
+0 0 0 0
+50 1 1d1+1 1d1+1 1d1+1 flame
+10 10 10 10
+0 0 0 0
+sit sit male 1000
+0 0 LARGE fire
+
+#0
+
+#OBJECTS
+
+#8801
+symbol holy~
+the Holy Symbol of Lupo~
+A very shiny symbol is on the floor.~
+gold~
+holy GIKL AO
+0 0 0 0 0
+17 50 3700 P
+
+#8803
+symbol holy~
+the Holy Symbol of Neutrus~
+A very shiny symbol is on the floor.~
+silver~
+holy GIKL AO
+0 0 0 0 0
+17 50 3700 P
+
+#8805
+symbol holy~
+the Holy Symbol of Bad Dude~
+A very shiny symbol is on the floor.~
+jade~
+holy GIKL AO
+0 0 0 0 0
+1 50 3700 P
+
+#0
+
+#ROOMS
+
+#8808
+The Temple of Lupo~
+Big temple. Cool.
+~
+0 CD 0
+S
+#0
+
+#RESETS
+S
+
+#SHOPS
+0
+
+#SPECIALS
+S
+
+#$

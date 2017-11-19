@@ -1,0 +1,759 @@
+#AREA	
+hall.are~
+The Hall of Heroes~
+{ 1  75} Lupo   The Hall of Heroes~
+800 899
+
+
+#MOBILES
+#800
+qwerty~
+the darkness~
+A black cloud hovers here
+~
+nothingness. empty shadows.
+~
+unique~
+ABG 0 0 0
+80 10 1d1+7999 1d1+99 1d1+1 flbite
+0 0 0 0
+0 ABCD 0 0
+stand stand none 0
+0 0 medium 0
+
+#801
+wizard man guildmaster~
+the ancient wizard~
+An old wizard is here to guide you
+~
+This man has spent many years studying and practicing the magical arts. He
+has moved beyond the power available to ordinary mages.
+~
+human~
+ABGJKRVb CDEFHZ 0 0
+76 0 1d1+14999 1d1+999 1d1+74 pound
+-20 -20 -20 -15
+EFHIK ABCD 0 0
+stand stand male 0
+0 0 medium 0
+
+#802
+priest man guildmaster~
+the ancient priest~
+An old priest is here to guide you
+~
+This man has spent many years following his god. He has moved beyond the 
+power available to ordinary clerics.
+~
+human~
+ABGJKQVb CDEFHZ 0 0
+76 0 1d1+14999 1d1+999 1d1+74 pound
+-20 -20 -20 -15
+EFHIK ABCD 0 0
+stand stand male 0
+0 0 medium 0
+
+#803
+assasin woman guildmaster~
+the ageless assasin~
+An seemingly young woman is here to guide you
+~
+This woman has spent many years as a rogue. She has moved beyond the skills
+posessed by ordinary thieves.
+~
+human~
+ABGJKRVb CDEFHZ 0 0
+76 0 1d1+14999 1d1+999 1d1+74 pound
+-20 -20 -20 -15
+EFHIK ABCD 0 0
+stand stand female 0
+0 0 medium 0
+
+#804
+knight man guildmaster~
+the ancient knight~
+An old knight is here to guide you
+~
+This man has spent many years following the path of chivalry. His skill with
+the sword and devotion to his honor have given him abilities beyond that of any
+ordinary warrior.
+~
+human~
+ABGJKTVb CDEFHZ 0 0
+76 10 1d1+18999 1d1+999 1d1+174 pound
+-20 -20 -20 -15
+EFHIK ABCD 0 0
+stand stand male 0
+0 0 medium 0
+
+#805
+statue magical wizard man~
+the magical statue~
+A large stone statue of a man dressed in wizard's robes stands here
+~
+This statue was carved from the same marble that makes up the walls of
+the Hall of Heroes. It seems somehow alive...
+~
+human~
+ABGR 0 0 0
+76 5  50d10+12500 1d1+99 10d10+35 pound
+-50 -50 -50 -25
+AFK AB CD 0
+stand stand none 100
+JM ABCGH huge 0
+
+#806
+statue holy priest man~
+the holy statue~
+A large stone statue of a man dressed in priest's vestments stands here
+~
+This statue was carved from the same marble that makes up the walls of
+the Hall of Heroes. It seems somehow alive...
+~
+human~
+ABGQ 0 0 0
+76 5  50d10+14000 1d1+99 10d10+35 pound
+-50 -50 -50 -25
+AFK AB CD 0
+stand stand none 100
+JM ABCGH huge 0
+
+#807
+statue veiled assasin man~
+the veiled statue~
+A large stone statue of a man wearing an assasin's veil stands here
+~
+This statue was carved from the same marble that makes up the walls of
+the Hall of Heroes. It seems somehow alive...
+~
+human~
+ABGS 0 0 0
+76 5  50d10+15000 1d1+99 10d10+35 pound
+-50 -50 -50 -25
+AFK AB CD 0
+stand stand none 100
+JM ABCGH huge 0
+
+#808
+statue armored wizard man~
+the armored statue~
+A large stone statue of a man dressed in knight's armor stands here
+~
+This statue was carved from the same marble that makes up the walls of
+the Hall of Heroes. It seems somehow alive...
+~
+human~
+ABGT 0 0 0
+76 5  50d10+17500 1d1+99 10d10+35 pound
+-50 -50 -50 -25
+AFK AB CD 0
+stand stand none 100
+JM ABCGH huge 0
+
+#809
+guardian strength shimmer figure power~
+the guardian of strength~
+A shimmering figure is here, glowing with an aura of power
+~
+Standing nearly eight feet tall, this being guards the Hall of Heroes,
+and is a source of strength to all who abide therein.
+~
+human~
+ABGQTV 0 0 0
+80 10 50d10+20000 1d1+99 10d10+56 wrath
+-50 -50 -50 -40
+AFHK B ACD 0 
+stand stand none 1000
+JM ABCGH large 0
+
+#810
+guardian honor shine figure power~
+the guardian of honor~
+A shining figure is here, glowing with an aura of power
+~
+Standing nearly eight feet tall, this being guards the Hall of Heroes,
+and is a source of honor to all who abide therein.
+~
+human~
+ABGQTV 0 0 0
+80 10 50d10+20000 1d1+99 10d10+56 wrath
+-50 -50 -50 -40
+AFHK B ACD 0 
+stand stand none 1000
+JM ABCGH large 0
+
+#0
+
+
+
+#OBJECTS
+
+#800
+pool water~
+a pool~
+There is a crystal clear pool of water sunken down into the floor.~
+marble~
+fountain 0 0
+0 0 'water' 0 0
+0 0 0 G
+E
+fountain~
+The endges of this small pool are lined with curved blocks of pure white 
+marble. The clear waters are completely undisturbed.
+~
+
+#801
+shimmer hammer power strength~
+the Hammer of Strength~
+a hammer with a shimmering aura of power rests here~
+metal~
+weapon AGI AN
+mace 10 7 pound G
+80 500 25000 P
+A
+1 4
+A
+19 7
+
+#802
+shimmer helm power honor~
+the Helm of Honor~
+a helm with a shimmering aura of power rests here~
+metal~
+armor AGI AE
+20 20 20 20 1
+80 150 25000 P
+A
+18 8
+A
+20 -5
+
+#803
+portal energy vortex~
+a swirling portal~
+a swirling vortex of energy floats here~
+energy~
+portal 0 0
+0 0 E 3001 0
+0 0 0 P
+
+#804
+blank scroll~
+a blank scroll~
+A scroll has been left here~
+paper~
+parchment 0 AO
+0 0 0 0 0
+1 10 1000 P
+
+#805
+glowing stone~
+a glowing stone~
+A glowing stone has been left here~
+rock~
+component A AO
+0 0 0 0 0
+1 10 1000 P
+
+#0
+
+
+
+#ROOMS
+#800
+The Silent Pool~
+You stand at the end of a long marble hallway. The cielings are over 30 feet
+high, and the walls are lined with tapestries depicting heroic acts of might
+and wonder. Tall windows shed a dim light to the hall. Thick, round stone 
+pillars line either side of the hall, leading into the distance to the South.
+~
+0 D 1
+D2
+~
+~
+0 0 801
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#801
+The Halls of Heroes~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the north and to the 
+south. Slightly smaller side hallways lead to the east and west.
+~
+0 D 1
+D0
+~
+~
+0 0 800
+D1
+~
+~
+0 0 811
+D2
+~
+~
+0 0 802
+D3
+~
+~
+0 0 808
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#802
+The Halls of Heroes~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the north and to the 
+south. Slightly smaller side hallways lead to the east and west.
+~
+0 D 1
+D0
+~
+~
+0 0 801
+D1
+~
+~
+0 0 817
+D2
+~
+~
+0 0 803
+D3
+~
+~
+0 0 814
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#803
+The Halls of Heroes~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the north and to the 
+south.
+~
+0 D 1
+D0
+~
+~
+0 0 802
+D2
+~
+~
+0 0 804
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#804
+The Halls of Heroes~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the north and to the 
+south. There are short hallways leading east and west from here.
+~
+0 D 1
+D0
+~
+~
+0 0 803
+D1
+~
+~
+0 0 807
+D2
+~
+~
+0 0 805
+D3
+~
+~
+0 0 806
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#805
+The Halls of Heroes~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the north and to the 
+south.
+~
+0 D 1
+D0
+~
+~
+0 0 804
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#806
+Alcove~
+You stand in a circular room. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the room. Thick, round stone pillars line
+the walls. A short hallway leads east.
+~
+0 D 1
+D1
+~
+~
+0 0 804
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#807
+Alcove~
+You stand in a circular room. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the room. Thick, round stone pillars line
+the walls. A short hallway leads west.
+~
+0 D 1
+D3
+~
+~
+0 0 804
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. The deeds they depict were
+performed by those who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#808
+The Hall of Wizards~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the east and to the 
+west.
+~
+0 D 1
+D1
+~
+~
+0 0 801
+D3
+~
+~
+0 0 809
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by mages who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#809
+The Hall of Wizards~
+You stand at the end of a long marble hallway. The cielings are over 30 feet
+high, and the walls are lined with tapestries depicting heroic acts of might 
+and wonder. Tall windows shed a dim light to the hall. Thick, round stone pillars line either side of the hall, leading into the distance to the east. There is a circular room to the north.
+~
+0 D 1
+D0
+~
+~
+0 0 810
+D1
+~
+~
+0 0 808
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by mages who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#810
+The Hall of Wizards~
+You stand in a circular room. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the room. Thick, round stone pillars line
+the walls. A short hallway leads south.
+~
+0 D 1
+D2
+~
+~
+0 0 809
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by mages who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#811
+The Hall of Priests~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the east and to the 
+west.
+~
+0 D 1
+D1
+~
+~
+0 0 812
+D3
+~
+~
+0 0 801
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by preists who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#812
+The Hall of Priests~
+You stand at the end of a long marble hallway. The cielings are over 30 feet 
+high, and the walls are lined with tapestries depicting heroic acts of might 
+and wonder. Tall windows shed a dim light to the hall. Thick, round stone 
+pillars line either side of the hall, leading into the distance to the west. There is a circular room to the north.
+
+~
+0 D 1
+D0
+~
+~
+0 0 813
+D3
+~
+~
+0 0 811
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by preists who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#813
+The Hall of Priests~
+You stand in a circular room. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the room. Thick, round stone pillars line
+the walls. A short hallway leads south.
+~
+0 D 1
+D2
+~
+~
+0 0 812
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by preists who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#814
+The Hall of Assasins~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the east and to the 
+west.
+~
+0 D 1
+D1
+~
+~
+0 0 802
+D3
+~
+~
+0 0 815
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by thieves who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#815
+The Hall of Assasins~
+You stand at the end of a long marble hallway. The cielings are over 30 feet 
+high, and the walls are lined with tapestries depicting heroic acts of might 
+and wonder. Tall windows shed a dim light to the hall. Thick, round stone pillars line either side of the hall, leading into the distance to the east. There is a circular room to the south.
+~
+0 D 1
+D1
+~
+~
+0 0 814
+D2
+~
+~
+0 0 816
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by thieves who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#816
+The Hall of Assasins~
+You stand in a circular room. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the room. Thick, round stone pillars line
+the walls. A short hallway leads north.
+~
+0 D 1
+D0
+~
+~
+0 0 815
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by thieves who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#817
+The Hall of Knights~
+You stand in a long marble hallway. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the hall. Thick, round stone pillars line
+either side of the hall, leading into the distance to the east and to the 
+west.
+~
+0 D 1
+D1
+~
+~
+0 0 818
+D3
+~
+~
+0 0 802
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by warriors who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#818
+The Hall of Knights~
+You stand at the end of a long marble hallway. The cielings are over 30 feet 
+high, and the walls are lined with tapestries depicting heroic acts of might 
+and wonder. Tall windows shed a dim light to the hall. Thick, round stone 
+pillars line either side of the hall, leading into the distance to the west. 
+There is a circular room to the south.
+~
+0 D 1
+D2
+~
+~
+0 0 819
+D3
+~
+~
+0 0 817
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by warriors who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+#819
+The Hall of Knights~
+You stand in a circular room. The cielings are over 30 feet high, and 
+the walls are lined with tapestries depicting heroic acts of might and wonder.
+Tall windows shed a dim light to the room. Thick, round stone pillars line
+the walls. A short hallway leads north.
+~
+0 D 1
+D0
+~
+~
+0 0 818
+E
+tapestry wall~
+Beautiful, ancient works of art hang on the walls. They depict acts of wonder
+performed by warriors who had reached the very limits of their power and had
+been transformed to a higher state.
+~
+S
+
+#0
+
+#RESETS
+
+O 0 800   0 800         *pool 
+O 0 803   0 805         *portal
+
+M 0 801   1 810  1	*wizard guildmaster
+M 0 802   1 813  1	*priest guildmaster
+M 0 803   1 816  1	*assasin guildmaster
+M 0 804   1 819  1	*knight guildmaster
+
+M 0 805   1 808  1	*wizard statue
+M 0 806   1 811  1	*priest statue
+M 0 807   1 814  1	*assasin statue
+M 0 808   1 817  1	*knight statue
+
+M 0 809   1 806  1      *guardian strength
+E 0 801   3 16          *spear
+M 0 810   1 807  1      *guardian honor
+E 0 802   3 6          *helm
+
+S
+
+#$

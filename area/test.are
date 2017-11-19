@@ -1,0 +1,110 @@
+#AREA	
+test.are~
+testing~
+{ 5 35} Lupo    Testing Area for New Stuff~
+9900 9999
+
+#MOBILES
+
+#9900
+man talkative~
+the talkative man~
+A man with a big mouth is standing here
+~
+He looks like he has trouble shutting up
+~
+human~
+0 0 0 0
+1 0 1d1+1 1d1+1 1d1+1 none
+10 10 10 10
+0 0 0 0
+stand stand male 1
+0 0 medium 0
+E
+t3~
+I'm talking number 3!~
+E
+t2~
+I'm talking number 2!~
+E
+t1~
+I'm talking number 1!~
+#9901
+man chatty~
+the chatty man~
+A man with a nice smile is standing here
+~
+He looks like he has something to say
+~
+human~
+0 0 0 0
+1 0 1d1+1 1d1+1 1d1+1 none
+10 10 10 10
+0 0 0 0
+stand stand male 1
+0 0 medium 0
+E
+t2~
+I'm talking number 2!~
+E
+t1~
+I'm talking number 1!~
+#9902
+man librarian~
+the librarian~
+A man with a pair of glasses and a reference book is standing here
+~
+He looks like he knows about a lot of things
+~
+human~
+0 0 0 0
+1 0 1d1+1 1d1+1 1d1+1 none
+10 10 10 10
+0 0 0 0
+stand stand male 1
+0 0 medium 0
+E
+unix~
+Unix is the coolest!~
+E
+book~
+Oh, I like books! I'm reading about UNIX right now.~
+
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#9900
+The test room~
+This room has been scrapped together out of various different parts and 
+materials. It doesn't look very sturdy.
+~
+0 0 0
+S
+#0
+
+
+#RESETS
+M 0 9900 1 9900 1 *talkative
+M 0 9901 1 9900 1 *chatty
+M 0 9902 1 9900 1 *librarian
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M 9900 spec_talkative      	* talkative man
+M 9901 spec_chatty      	* chatty man
+M 9902 spec_informative      	* informative man
+S
+
+
+
+#$

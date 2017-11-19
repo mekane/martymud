@@ -1,0 +1,2119 @@
+
+
+Rom Frequently Asked Questions
+
+
+Section 0 - ADMINISTRIVIA
+
+0.1 Disclaimer
+0.2 Revision History
+0.3 Obtaining this document
+0.4 Suggestions/comment/contact
+information
+0.5  Credits
+
+Section 1 - THE BASICS
+1.1 What is ROM?
+1.2 What do I need to run it?
+1.3 Where can I get ROM?
+1.4 Is ROM free?
+  1.4.1 I've made all these changes.. do I
+still have to call my mud a Rom derivitive?
+  1.4.2  So I've done all this work for
+nothing?
+1.5 What is the latest version of ROM? Future
+versions?
+
+Section 2 - GETTING STARTED
+
+2.1 OK.. I've got this big .tar.gz file.now
+what?
+2.2 What is the purpose of each
+directory?
+2.3 How do I compile the code?
+  2.3.1  Linux Considerations
+(including RedHat 5.0)
+  2.3.2  Solaris considerations
+  2.3.3  Windows 95/NT
+considerations
+  2.3.4  Digital Unix considerations
+2.4 How do I start the mud?
+2.5 Why use the startup script? What does it
+do?
+2.6 How do I make an immortal char?
+2.7 Now what?
+2.8 The importance of backups
+
+Section 3 - EXPANDING THE MUD WITH PUBLIC CODE
+
+3.1 Is there code patches/areas available
+publically I can get?
+3.2 Should I use these or write my
+own?
+3.3 What is an OLC? Do I need one?
+3.4 I hate monochrome..can I get a colour
+patch?
+3.5 What are mobprogs? Can I get them for
+ROM?
+3.6 What other code snippets/patches are
+there?
+3.7 What about areas?
+
+Section 4 - USING GCC
+
+4.1 What is GCC?
+4.2 What can I do with the Makefile?
+4.3 What are the steps of the compilatioN
+process?
+4.4 My code won't compile..why?
+  4.4.1  'parse error'
+  4.4.2  'assignment makes pointer from
+integer without a cast'
+  4.4.3  'implicit definition of
+function'
+  4.4.4  'declared here not in a
+function'
+4.5 But why can't I just ignore
+warnings?
+4.6 What options may I want to add to the
+Makefile?
+
+Section 5 - TROUBLESHOOTING CRASHES
+
+5.1  My mud crashed..why?  What do I
+do?
+5.2  Looking at logfiles.
+5.3 Common log file messages
+  5.3.1 'File * line * : MAX_STRING
+exceeded'
+  5.3.2 'Loading '
+  5.3.3 'Fread_* : bad format'
+  5.3.4  '* : No such *index'
+  5.3.5 'Init socket: bind: Address already
+in use'
+5.3.6 'ER &lt;mob&gt; &lt;object&gt;
+5.4 What is GDB?
+5.5 Do I need GDB?
+5.6 Can I use GDB on a corefile? How?
+5.7 Can I attach GDB to a running mud?
+5.8 How do I start the mud from GDB?
+5.9 What are breakpoints? How do I use
+them?
+5.10 OK..the mud crashed and I've lots of
+info..now what?
+5.11 Examining the stack
+5.12 Examining variables
+
+Section 6 - OTHER UTILITIES
+6.1 What is grep?  Is it useful?
+6.2 What about Perl?
+6.3 What is profiling?
+6.4 How do I profile my mud?
+6.5 What do I do with the profile
+information?
+
+Section 7 - COMMON CODING QUERIES
+
+7.1 How do I change the levels on my
+mud?
+7.2 How do I add a new class?
+7.3 How do I add a new race?
+7.4 How do I add a new clan?
+7.5 How do I add a new skill?
+7.6 How does the command table work?  How dO i
+add a new command?
+7.7 Why does the mud crash when I type 'who
+jkjkljl'?
+7.8 My players are levelling from 1 to hero
+after one kill..what's going
+on?
+7.9 Why do my mobprogs suddenly stop
+working?
+ 7.10  How can I add more flags past
+'ee'?
+ 7.11  Why don't objects reset to the
+room?
+ 7.12  How do I increase my range of possible 
+vnums?
+ 7.13  Why can't I see much when switched
+into a mob?
+ 7.14  How do I add additional
+colours?
+
+Section 8 - OTHER RESOURCES
+8.1 The ROM mailing list
+8.2 The Merc-l mailing list
+8.3 Usenet newsgroups
+8.4 C Programming Resources
+  8.4.1 How do I learn the C programming
+language?
+  8.4.2 Which C book should I buy?
+  8.4.3 The C FAQ
+  8.4.4 The books or FAQ didn't have the
+answer..where now?
+8.5 WWW/FTP sites
+
+
+       
+
+
+
+
+
+Section 0 - ADMINISTRIVIA
+
+
+
+0.1 Disclaimer
+
+This document is an attempt to address questions about the ROM codebase
+that frequently arise, especially on the ROM mailing list.  I do not in
+any way claim that the information here is authorative, official or even
+correct.  I have however tried to make it as precise and accurate as
+possible.  I take no liability whatsoever for any damages, loss of data or
+other consequences arising from the use of the information found in this
+document.
+ 
+
+Many things involving muds and the running of them are subjective, and
+though I've tried to keep this FAQ free of any 'agenda', it will
+inevitably contain some points which have a high opinion content.  Any
+opinions expressed within are mine solely, I in no way speak for the ROM
+consortium.  
+
+
+This document may be distributed freely, but to preserve attributions and
+keep things up to date, any part of it that is re-distributed publicly,
+in whole or in part, must contain both the accreditations for the part(s)
+used plus the address at which the current version can be found.
+
+ 0.2 Revision History
+
+Initial version - 0.1 Jan 1998
+
+
+Current Version 0.2 - May 1998
+  Additions : 1.4.1, 1.4.2, 5.3.6, 7.9, 7.10, 7.11, 7.12, 7.13,
+7.14, 8.4
+Changed : 1.4, 1.5, 2.3 intro, 2.3.1, 2.3.2, 2.3.3, 3.2, 3.4, 5.6 - 5.12,
+6.2,
+Section 8 intro, 8.1, various updating of links and corrections.
+
+
+0.3  Obtaining this document
+
+Initially this will be found only at:
+http://www.kycor.demon.co.uk/romfaq/index.html
+
+The HTML is currently crude, hopefully that too will develop over time.
+As the document gets updated, expect also to see it appearing elsewhere.
+
+If you have problems getting this document, mail me for a copy, stating
+whether you want .html or .txt.
+
+[Obviously this document is now available in multiple places, including http://www.hypercube.org/tess/rom/faq]
+
+0.4  Contacting the author -
+corrections/suggestions
+
+I am eager for feedback on this document, be it positive or negative.
+Suggestions will be very seriously considered, and corrections swiftly
+addressed if I find the FAQ is in error.  Flames will be redirected to
+/dev/null, so don't bother, I'm thick-skinned.
+
+Mail me at: garry@kycor.demon.co.uk
+
+0.5 Credits
+
+  My original notion to attribute contributions at the point where they
+are used fell apart somewhat when given useful yet general material by
+some.  I'll probably have to abandon such direct crediting in the long
+term, but I hope to maintain 'point of use' acreditation for those
+sections completely written by others, those I've no personal experience
+with or are directly subjective, such as book recommendations.  This will
+be the place to find the names of those who have helped with this
+document, all of whom have my gratitude.  If your name isn't here and it
+should be, send me abusive mail.
+
+
+Thanks go to, in roughly alphabetical order:
+Erwin Andreasen, Julie Boesen, Rich Bradshaw, Lantham, Shad
+Muegge, Nebseni, Michael Weise.
+
+
+Special thanks to Gabrielle Taylor for support, proof-reading, HTML
+enhancement and generally being a good egg.
+
+
+Thanks must also go to the creators of Rom, Merc and Diku, for providing
+us with the codebases on which we build.  Cheers guys :)
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+
+Section 1 - The Basics
+
+
+
+1.1 What is ROM?
+
+  ROm is a mud server, ie it is a program that when running lets people
+connect to it and take the part of characters in a virtual world.  If this
+makes no sense, then check out the FAQ for the rec.games.mud.misc
+newsgroup which provides answers to the more fundamental questions.
+
+
+  ROM is a server that is derived from the Merc code base, which in turn
+is a derivative from the original Diku code.  The effects of this can be
+seen in question  1.4 
+
+
+
+  The main developer of ROM (which was originally a mnemonic for "Rivers
+Of Mud") is Russ Taylor, though Brian Moore and Gabrielle Taylor have
+played a significant role in it's development, along with a number of
+other people, all of whom to which we owe a great debt of gratitude.  Read
+the credits files in your ROM package to get more details.
+
+
+  ROM is currently in beta, but nonetheless provides a very stable and
+efficient code base with many notable features.  There are by default 4 races,
+4 classes, and the ability to customize which skills each player gets.
+There is a clan system which can be used to restrict pkill, and enough imm
+commands to effectively deal with running the mud, as well as handling
+troublesome players.  There are several dozen areas provided with the
+stock package, so with usually little effort it is possible to have a
+fully running mud from scratch in a matter of minutes.  This however, is
+the easy part of running a mud.
+
+
+ 1.2 What do I need to run it?
+
+  ROM is not, as most erroneously believe, a highly processor intensive
+program.  A running mud on a pentium machine running Linux may typically
+use less than 5% of the cpu time.  Memory however can be a consideration.
+The basic package has enough areas to use up a total of approx. 5mb of
+ram,  but as more areas are added this can increase significantly.  ROM is
+very efficient in it's memory handling, and as such the program itself is
+very compact in size indeed.  The author's mud currently with 130 areas
+uses about 13mb of memory.  Disk space requirements  are also not
+excessive, with most space being taken up by object files created during
+compilation and again area files.  A running mud with plenty of areas can
+live  happily in 50mb of disk space.
+
+
+  The operating system requirement is linked with that of network
+connectivity.  A DOS compiled ROM needs no network, as it supports only
+one user.  When the mud is run on linux or Windows 95/NT however, a full
+time network connection is required if you seriously want to have your
+mud a public concern.  Getting server space these days is much easier than
+several years ago, with many companies offering to host a mud on a machine
+at their site for a relatively small sum of around $30-$50 per month.  Of
+course if you have the ability to set up your own full time server that's
+great, but avoid running a mud on a machine without the owner's
+permission.. you wouldn't be the first University student to get into
+major trouble for unauthorised use of computer equipment.
+
+ 1.3 Where can I get ROM?
+
+  The most official places to pick up the unix package for ROm are from
+Russ Taylor's home page, at
+http://www.cmc.net/~rtaylor, or
+from
+the Hypercube site, at http://www.hypercube.org/tess/rom.
+
+
+  Alternatively, this plus windows versions can be found at the game.org
+ftp site, which has many other mud resources.  For ROM look in:
+ftp://ftp.game.org/pub/mud/diku/rom/
+
+
+
+1.4 Is ROM free?
+
+  In a word, 'NO'.  ROM is neither shareware or freeware.  It comes with
+specific licences that must be followed by anyone using the code.  Being a
+derivative of MERC and in turn Diku, you will also be subject to the
+licenses for those code bases also.  All the licenses can be found within
+your ROM package, and should be read before going too far into the ROM
+world.  A good summary of the licence conditions would be:
+"Make no financial gains from this, and give credit where it is due."
+
+
+  There are more terms, for these read all the appropriate licence files.
+And if all this sounds strict, consider the effort required to write the
+40,000 lines of code that is ROM.  It doesn't seem too extreme to ask what
+is asked for the privilege of getting this code otherwise free.  If you
+feel the licence conditions are too much to ask, then good luck with your
+own code base.
+
+
+The question of copyright and just what it means, especially with
+reference to Rom does hit the Rom list frequently, the following is an
+attempt to answer the usual variations on this theme.  For more
+information on copyright, the
+10 Copyright
+Myths is
+a good document to
+start with, and it also has a number of useful links for further reading
+on the subject.
+
+  1.4.1  I've changed the Rom code substantially.. do
+I still have to call it a Rom derivitive?
+
+Yes.  From various international copyright treaties, including the Berne
+convention, a piece of work that you commence by extending an existing
+piece of work will always be considered a derivitive of that original
+work.  In somewhat plainer terms, your mud will always be bound by the
+terms of the Rom licence if it's development came from the Rom code.
+
+
+The only way a mud is totally free from the Rom licence is if it's code
+was developed from scratch, with no reference whatsoever to the Rom
+source.  This is the legal standing for any intellectual work, this is not
+mere invention by the Rom consortium.
+
+
+  1.4.2  So I put in all this work for
+nothing?
+
+By no means.  In the same way that the copyright statutes protect the
+creator of original works, they likewise protect the changes made to such
+works.  Any changes you make to the source are yours, copyrighted to you.
+You have the same rights and controls over your additions and changes as
+the Rom Consortium do to the changes they introduced into Merc.  You can
+release the code publically if you wish, but only if you identify it as a
+derivitive of the Rom source.  You can add any additional licence
+requirements to such publically released code, with the exceptions that
+you must both fully comply with all licences to which you are liable
+(Diku, Merc and Rom), and provide no clauses in the new licence that
+contradicts any of the provisions in the previous licences.
+
+
+1.5 What is the latest version of ROM? Future
+versions?
+
+  ROM is currently version 2.4 beta 5.  Updates will be announced when
+they become available, so don't waste Russ Taylor's time e-mailing him
+asking when version 2.5 will be released.  The answer you will get is
+doubtless "when it's ready."
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 2 - Getting Started
+
+
+
+  Since most people run ROM on a unix/linux system, most of these answers
+are written with this platform in mind.  Users of ROM on other OS's may
+need to do things slightly differently.. refer to question 2.3.
+
+ 2.1 OK..I've got this big .tar.gz file.. now what?
+
+
+  Simply put you need to uncompress and un-tar the file, which when done
+will use about 4 mb's of disk space.  Note that compilation will eat
+another few mb with object files, so make sure you have plenty of disk
+space to accommodate your expanding mud.  You are of course doing all this
+on a machine you are allowed to run muds on right?  More than one person
+has gotten into trouble for running a mud when they really shouldn't have
+been, so be careful. 
+
+
+  Now, assuming you have the file on a suitable account, all that remains
+is to expand the thing.  The following commands should do the trick:
+
+gzip -d rom24b4a.tar.gz
+tar -xvf rom24b4a.tar
+
+Note that your filename may be slightly different.  Doing these commands
+will create a Rom24 directory, within which is the ROM distribution.  You
+can now if you wish delete the rom24b4a.tar file to save some space.. but
+if you do remember where you got it.. having a copy of the unmodified
+source code is often very useful indeed.
+
+2.2 What is the purpose of each directory?
+
+  When you enter the Rom24 directory, you will see a number of files and
+subdirectories.  The files you should really read sometime soon, they
+contain version and licence information which is important to know.  The
+created subdirectories are as follows:
+
+
+  src : contains the C source code.. expect to spend  a lot of time
+here
+
+  area - contains the area files and startup script(s)
+
+  player -  initially empty, this will contain the saved player files
+
+  gods - initially empty, this will contain a short file indicating the
+level and trust of every imm character.. can be very useful to keep track
+of just how your imms are, and suddenly seeing new entries here can be an
+indication of hackers.
+
+  log - initially empty, this will contain your log files, which contain
+information about the running of the game.  The first file will be called
+1000.log, the second 1001.log and so forth.  Looking into your log
+directory some day to see hundreds or thousands of such files is a sure
+sign that your mud is continuously failing to boot.
+
+ docs - this directory contains a lot of documentation that you really
+should spend the time to read.  Some of them are somewhat out of date,
+being from the original MERC release, but they still do contain important
+information, and others have been updated to include ROM specific
+information.  
+
+2.3 How do I compile the code?
+
+Rom should compile on just about any unix system, and lately running it on
+a Windows machine has also become popular.  There are some problems that
+arise when compiling on certain systems, and this section will try to
+address these.
+
+
+There are several very common types of errors that arise, a few are listed
+here to try and help you understand more where the problem lies.
+
+
+Error messages about 'conflicting types' for a function declaration arise
+when a system function that has been given a prototype in the Rom code has
+a prototype in the system headers with mismatched argument lists.  This
+happens as the Merc coders added a collection of function prototypes as
+many systems lacked these in those days.  This tends to be much less the
+case now, and if you get a clash between a function Rom defines and a
+system-defined function, it is totally safe to comment out the declaration
+found in the Rom source.
+
+
+Errors relating to 'undefined symbol' problems are usually indicitive of
+the mud requiring some libraries that aren't being linked into the
+executable.  To fix this, add the appropriate libraries to the linker line
+of your Makefile.  For example, on my RedHat system 5.0 system which
+requires the crypt library added explicitly, my linker line looks like :
+$(CC) $(L_FLAGS) -o rom $(O_FILES) -lcrypt
+
+
+  2.3.1 Linux considerations (including
+RedHat 5.0)
+
+  ROM should compile 'out of the box' on a linux system without error..
+simply change to the src directory and type 'make'.  
+
+
+RedHat 5.0 causes a few problems, due to it's adoption of glibc.  You will
+need to:
+1. In comm.c, comment out the declaration of the functions getpeername,
+getsockname and listen, around line 176 or so.
+2. In db.c, comment out the declaration of the function 'random', around
+line 52 or so.
+3. Because glibc has it's crypt functions in a separate library, you need
+to add '-lcrypt' to the linker line of the Makefile, making it look
+something like:
+$(CC) $(L_FLAGS) -o rom $(O_FILES) -lcrypt 
+
+These changes should let you compile under RedHat 5.0, plus any other
+linux using glibc.
+
+
+2.3.2  Solaris considerations
+
+Note :  The recently released 2.4B5 version of Rom contains a Makefile for
+Solaris, called Makefile.solaris in the src/ directory.  The following
+information is included on the belief that extra information can never
+hurt.
+
+
+From: "Rich 'Wolflord' Bradshaw"
+
+
+Makefile:
+below the L_FLAGS definition add
+LIBS    = -lsocket -lnsl
+
+and for the target, tack $(LIBS) onto the end of the compile line.
+
+rom: $(O_FILES)
+        rm -f rom
+        $(CC) $(L_FLAGS) -o rom $(O_FILES) $(LIBS)
+
+---
+comm.c
+In the Solaris Sys V definitions, around line 286, change
+#if defined(SYSV)
+to read
+#if defined(SYSV) || defined(sparc)
+
+in function: int init_socket( int port ), change
+#if defined(SO_DONTLINGER) &amp;&amp; !defined(SYSV)
+to read
+#if defined(SO_DONTLINGER) &amp;&amp; !defined(SYSV) &amp;&amp; !defined(sparc)
+
+---
+merc.h
+find the line reading:
+#if     defined(sun)
+and just below the fprintf definition, change the line
+#if     defined(SYSV)
+to read
+#if     defined(SYSV) || defined(sparc)
+
+
+--------------
+Hopefully that should be everything, well if sparc is defined anyway.
+Type:
+gcc -dM -E - 
+
+which should list the defined macros. Pick a suitable one from there for
+your system.
+
+From kecnom@interaccess.com Mon May  4 00:38:53 1998
+kecnom@interaccess.com also
+said :
+
+Heres what I did to get Rom 2.4 to work on my 2 systems.
+in comm.c:
+comment out the following 
+the definitions for  gettimeofday and getsockopt
+
+and I needed to comment out 
+If defined(SO_DONTLINGER &amp;&amp; !defined(SYSV)
+.....all code in here
+endif
+
+also had to link with these options as well:
+
+
+-lsocket -lnsl
+
+
+2.3.3  Windows 95/NT considerations
+
+How to compile and run a Rom under Windows has recently become the most
+frequently raised topic on the Rom list.  Unfortunately, many people don't
+use windows as their mud platform, so the knowledge base is small.  I
+personally see enough of Windows development tools at work and am glad not
+to use them at home, so don't have first-hand experience of this myself.
+However, the following will hopefully be of use until I can get more
+definite answers to this question.
+
+
+The 'easiest' way of getting Rom compiled under Windows is to use the
+Cygnus system, which is a port of most of the unix-based programming
+utilities that a mud programmer would want.  You can download the package
+and get information at the Cygnus website:
+http://www.cygnus.com
+
+You will then need Rom code that has been modified to work under the Win32
+environment.  You can get a Rom modified by Lordrom from:
+ftp://ftp.game.org/pub/mud/diku/merc/rom/windows/r24ba32s.zip
+These two packages together should get you up and going under Windows.
+
+
+The other option for Windows development is to use a native Windows
+development tool such as Microsoft Visual C++.  My own observations from
+the Rom list seem to be that this route is more troublesome, but some
+people like the environment and tools provided by the MS product.
+
+
+On his homepage at 
+http://home.att.net/~mkw/mudframe.html
+  Michael Weis  has links to his MSVC
+port of
+Rom2.4b4a plus instructions on getting the mud compiled and running.
+
+
+Sherlock Holmes also has a page for a MSVC port of Rom, found at
+http://www.netrover.com/~nafiel/rom/howto5.html
+This page has both code and instructions.
+
+
+ 2.3.4 Digital Unix considerations
+
+Using gcc, and note I don't run my mud on this platform 24/7, but these
+are the steps I found necessary to compile a stock Rom 2.4b4a on Digital
+Unix 4.0
+ 1. Add -DNOCRYPT to the 'nocrypt' section of your Makefile
+2. Include unistd.h in comm.c
+3. In db.c, comment out the definitions of random and srandom (lines 53-54
+or so)
+4. You will get warnings seeming to indicate Digital Unix stores time_t as
+an int, not unreasonable on a 64-bit machine, but the upshoot is that when
+writing time values in fprintf it complains that you are writing an int as
+a long token.  Either change the appropriate function calls or ignore
+these warnings as they shouldn't break anything.
+
+
+
+2.4 How do I start the mud?
+
+  To start the mud under unix, switch to the area directory and type
+startup &amp;
+which should start the mud and away you go.  There are a few alternatives
+here - 
+
+On systems where the current directory is not in the search path, type
+./startup &amp;
+
+For systems with funny shells, type
+csh -f ./startup &amp;
+
+On a Win32 port of ROM, run the xxx file, which performs the same
+functionality as the unix startup.
+
+
+
+2.5 Why use the startup script? What does it
+do?
+
+  You need not use the startup script, simply typing
+../src/rom 4000 &amp;
+from within the area directory will start the mud, but there are a few
+disadvantages to this way.
+
+  Firstly, all messages usually written to a log file will be sent to your
+screen on the window that executed this command.  Secondly, and more
+importantly, when this window is closed or you logout from this session,
+the mud will be terminated as part of the standard logout procedure.
+
+
+
+  The startup script checks to see the name of the last log file, and
+starts the new one with the next filename in succession.  It also sets the
+port for which the mud will run, the default being 9000.  You can change
+this by simply editing the startup script.  Note that choice of port
+number is not necessarily arbitrary..  if you do not own/run the machine
+on which you're running the mud you need to talk to the
+owner/administrator to see which port number you should use.  Choosing a
+port number that is reserved for someone else's use is usually not
+condusive to a long stay on that account.
+
+
+  That caveat aside, and assuming the mud is started properly, you can
+connect to it by simply telnet'ing to the mud port on your machine.  This
+obviously can be from the machine itself or a remote machine.  If it's
+from the machine on the mud is running, and especially if the machine is
+not connected to a network, remember that telnet'ing to 'localhost' will
+always go to the home machine.
+
+
+
+2.6 How do I make an Immortal char?
+
+  When you first connect to the mud, you will be a lowly level 1 with no
+imms to advance you in level.  What you need to do is save your char, then
+quit from the game.  Go into the player directory and you will see there a
+file with your character's name.  Edit this with your favourite text
+editor and look for the line:
+Levl 1
+and change this to
+Levl 60
+
+
+  It can't hurt while you're here to look at the player file structure..
+each line starts with a keyword, then the values for that attribute.  
+
+
+  Now reconnect to the mud with this same character name and you are now
+an immortal with access to all the imm commands.. type 'wizhelp' for a
+list of most of them.  Particularly useful is the 'shutdown' command,
+which will as the name suggests stop the mud running, and 'reboot', which
+will terminate the mud and restart it.  This command you will use an awful
+lot as you add and test new code.  Note though that the mud will only
+reboot if started via a startup script/program.
+
+
+2.7 Now what?
+
+  That's up to you, depending on what you want from the mud.  If you just
+want to mess around, look at the areas and such then do that.  If however
+you plan to run the mud as a public concern, then you will need to look at
+expanding the mud, in terms of both code and areas.  
+
+
+2.8 The importance of backups
+
+One of the most tedious things to do is frequently make backups.  However,
+it's significantly worse to recreate work that you lost and had no backup
+for.  Worse still is listening to dozens of players scream at you for
+having no backups of their player files.  Having imms scream at you for
+having no backups of their area files isn't a great hoot either.  
+
+
+In other words, backups are *definitely* worth it in the long run.  They
+are a drag for the 99.9% of times you never need them, but a godsend when
+that 0.1% comes calling.
+
+
+Paranoia is a good frame of mind to make backups in.. you are worried of
+accidental deletion of files..so you make a backup on your account.  Then
+you think that if the hard drive goes belly up you are sunk, so you make
+another backup on a different machine.  Then you wonder what you'll do if
+the building both machines are in catches fire, and make an off-site
+backup.  I keep backups on 4 machines, on 3 sites, on 2 continents.  Even
+if your system admins do backups, keeping one of your own off site really
+can't hurt.  I've seen muds die because they lost *everything* due to a
+major computer failure, and it's not funny.
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 3 - Expanding the mud with public code
+
+
+
+3.1 Is there code patches/areas publicly available I
+can get?
+
+  Most definitely.  See the list of resource sites in section 8.4 of this
+document for a list of places where you'll find code snippets, areas,
+ideas, information and much more besides for ROM based muds.  You should
+also bear in mind that since ROM is derived from MERC, many of the code
+snippets for those muds will work on ROM, though how much changes you'll
+need to make varies from snippet to snippet.
+
+
+  Also, remember that these things are publically available due to a 
+number of people's willingness to share their work with the mud admin
+community at large.  Free things generally come with no warranty, and this
+is surely the case with what you'll find on the net.  The vast majority
+are very slick packages that work well, but adding a chunk of new code to
+your mud is something you need to take care over, firstly as the most
+common problems with such things are installation errors, and also because
+it is generally not a good idea to start including in your code huge
+swathes that you don't understand.  Time spent reading through the patch
+carefully to get a grasp on it's workings will surely be time well spent,
+firstly as it can help avoid the simpler installation errors, and secondly
+because the more knowledge you have of your codebase the better by far
+when you find yourself bug hunting.
+
+
+You also should read carefully any licence that accompanies the code, and
+don't use the code if you find the terms unacceptable.
+
+
+3.2 Should I use these or write my own?
+
+  A very common philosophy held in Computer Science is "Don't re-invent
+the wheel", and this holds true for muds.  If you need a code patch to
+perform a specific task and you see one, there is nothing to stop you
+using it.  However, these patches were written to solve the problems that
+the writer had- nothing says your needs will be exactly the same.  As
+such, getting the patch could perhaps be looked upon as a time-saving
+exercise to get you up and running with a certain bit of code, but
+enhancing and altering the patch to your own specific needs is something
+you probably should consider doing.  There are a lot of muds out there,
+and many many of them will be using the same snippets you are using, so if
+you wish your mud to stand out from the crowd you need to add things of
+your own to make it more unique.  
+
+
+  Some people dislike using snippets in any form, and this attitude can
+have it's advantages as writing the code yourself from scratch can be very
+educational and rewarding, plus it gives you a piece of code that conforms
+to your exact specifications.  And if you do write something yourself that
+you think may be of use to others, consider making it publicly
+available- as the MERC headers says "What goes around comes around".
+
+3.3  What is an OLC? Do I need one?
+
+  There are two distinct parts to what makes a mud: the compiled C code
+that is the game engine and the area files that make up the world the
+players move in, specifying the rooms, objects and monsters.  This task of
+area writing has been traditionally viewed as very difficult as it
+required  the area author to put together a text file containing what
+often seemed to be incomprehensible strings of numbers and letters to
+represent things in the world.  This process could often be very time
+consuming and error prone.  
+
+
+  The concept of On Line Creation developed some years ago, whereby the
+mud itself had a range of new commands that allowed characters logged on
+to the mud to expand the world while the mud was live.  The most popular
+version of an OLC package seen for ROM is the ILAB OLC, originating from
+the Isles mud and written by Surreality,  whose contribution to the mud
+community has lived on long past his untimely death at a very young age in
+1996. Ports have been made to Envy, Rom 2.3 and Rom 2.4 amongst others.  Perhaps
+the two most commonly used
+ROM OLC's are Beowulf's and Ivan's 2.4 ports of ILAB, available from the
+sites seen in section 8.4.
+
+
+  Whether you need/want an OLC is a very individual decision, many would
+never do the old way of building again, others feel the inclusion of an
+OLC causes more problems than it solves.  Possible advantages of using an
+OLC are:
+
+ - The interface to building is easier to use than offline building
+
+ - The builder sees their area take shape around them, potentially very
+much more rewarding
+
+ - Problems in the areas can be easily changed online without rebooting
+the mud
+
+ - It is much easier for a team of builders to co-operate on an area
+
+ - The mud implementors don't have to spend time correcting bad area
+files
+
+Possible disadvantages not to use an OLC are:
+
+- The ILAB OLC is to some people far from easy to use
+
+ - An OLC is a very large patch, and adding this can cause major
+instabilities in your code for a while until it is shaken down (less true
+now with packaged OLC's such as Ivan's)
+
+ - Security can be a major concern- builders can easily abuse their power
+
+
+ - It can be argued that off-line building gives the builder a more
+thorough understanding of what they are doing.
+
+  There is another alternative, in the packages intended to make off-line
+building less tedious.  MZF (Make Zones Fast) is a windows program praised
+by many as providing a nice interface to area building that still frees
+the mud admins from the problems of an OLC.  However, MZF and programs of
+it's ilk can be limited in that they can produce area formats of the most
+popular mud code bases.  If you have significantly altered how your area
+files are structured then this may not be an option.
+
+
+3.4 I hate monochrome.. can I get a colour
+patch?
+
+  The request for a Colour patch is possibly the most frequent seen on the
+ROM list.  There are a number of these, the 2 most popular probably being
+Lope's patch and Wrecky boys.  They are available from the sites in section
+8.4.
+
+
+  Both support the ANSI colour codes, which will mean 16 colours total
+(bright and dark shades each of 8 colours), and possibly flashing text,
+though how successful people have been getting this feature to work is
+limited.  Perhaps the biggest difference between the two patches is that
+Lope's is more of a complete system, whereas Wrecky Boy's provides you with
+the functions to interpret colour codes, the code to add these to the mud
+and provide player customisation support is left to you to code.  If you
+want colour quick and fast then Lope's is perhaps better suited for you,
+those of you who want your own colour system will get better results by
+using Wreck's code as your colour engine.
+
+
+See also  section 7.14  on the topic of
+why you are limited to very few colours and can expect great variations on
+how well they display to users.
+
+
+3.5 What are mobprogs? Can I get them for
+ROM?
+
+  One of the most common complaints about muds is how there is little
+interaction between the mud world and the player.  Mobs are most
+criticised, the description of them as "boxes holding equipment that can
+be hard to open" is often quite sadly accurate.  Special procedures as
+found in ROM provide a little life to some mobs, but these require hard
+coding for every such procedure required. 
+
+
+  Mobprogs are a system whereby mobs can be assigned actions to perform in
+certain situations, say greet a character when they enter the room, and
+this information is stored in the area file, thereby being much easier to
+change, especially if OLC support is added for them.
+
+
+  Mobprogs can add life to mobs, but the system is not without problems.
+The mobprog system originally used in Merc was found to be too buggy that
+it was removed from the code.  A Rom 2.4 version of this system with a
+number of major bugfixes has been written by Newt, available from the site
+in section 8.4.  Some people have still found problems with this system
+though.
+
+
+  Perhaps the most important point when considering mobprogs is the fact
+that they are a tool that when used well can give an added degree of
+atmosphere, but can be used badly and badly overused.  Judicious
+application of well-thought out and designed mobprogs can liven up your
+mobs considerably though.
+
+3.6 What other code snippets/patches are
+there?
+
+  In a word- LOTS.  Your best bet is to browse around the sites found in
+section 8.4, but you can expect to find new skills, more efficient
+replacements  for various parts of the code,  inter-mud communication
+packages and much more besides.  A lot of people have contributed major
+work to aid the mud community in general.  
+
+3.7  What about areas?
+
+Again, many areas have been publicly released, and you are free to add
+these to your mud.  To add a new area to your mud, simply place it in your
+area directory and add it's name to the area.lst file found there.  Make
+careful note of the area file format however.. you may have to use
+something like MZF to convert say an Envy area to Rom 2.4 so that you can
+use it. 
+
+You should consider looking at RomLama  which is a library of
+Rom areas that are given to anyone who submits a original area to the
+distribution and who is in compliance with all Rom licences.
+ 
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 4 - Using GCC
+
+
+4.1 What is GCC?
+
+  GCC is the C compiler provided free to the computer community by GNU.
+It is the compiler of choice for working with muds on a Unix system, and
+recently has become available for Microsoft Windows 95 and NT in the
+Cygnus package.  If your system has gcc installed, you are strongly
+advised to use it for your compilation needs, as it provides a much more
+coherent and solid base than do some standard unix based 'cc' compilers.  
+
+4.2 What can I do with the Makefile?
+
+  When you type 'make' to compile your code, the options supplied to the
+compiler are held in the file called 'Makefile' in your src/ directory.
+The makefile supplied with ROM is very good for showing many warnings and
+compiling efficient code, but you should not be afraid to look at the
+file.  Most notably, if you create new .c files that you want to add to
+your mud, this needs added to the makefile.  If you notice, the makefile
+has a section containing a list of .o files- these are the names of all
+your .c files with an .o extension instead.  Therefore, if you wish to add
+a new file called "myfile.c", you would append "myfile.o" to the end of
+this list.  Note that a backslash is used to indicate the list continues
+on the following line.
+
+
+For some Operating Systems, you may need to make additional changes, such
+as specifying certain libraries the compiler needs to include, certain
+values to define etc.  See question 2.3 for some relevant points for a
+number of commonly used OS's.
+
+4.3 What are the steps of the compilation
+process?
+
+  There are two main stages to the compilation process, though it should
+be noted that each of these can be subdivided.
+
+
+  Firstly, each .c file is compiled into a form that the computer
+understands, known as an object file.  The object file for a given .c file
+has the same name but with a .o extension rather than .c.  If all the .c
+files successfully compile without errors then the .o files are all linked
+together into a file called 'rom', which is the main mud executable.
+
+
+  These two stages can easily fail, and the following sections will
+attempt to explain some of the more common compilation error messages.  It
+may be helpful to keep in mind the following list of what is most likely
+to go wrong in each stage:
+
+Compilation of .c files
+
+ - Syntax errors, such as forgetting a semicolon, adding too many brackets
+to an expression and such.
+
+ - Typos, for example using '=' instead of '==' in a equality test,
+mistyping a variable name.
+
+ - Forgetting to declare variables used
+
+  Mixing up types, most commonly with pointers
+
+Linking of the Executable
+
+ - Declaring a function in two places
+
+ - Declaring a function header, using the function but never coding the
+function body
+
+Having a typo in either the function body or prototype that means the
+linker can't relate the two
+  
+  The following types of errors will *not* be caught:
+
+ - Accessing a null pointer
+
+ - Overrunning an array boundary
+
+Improperly initialising variables, especially when involving the
+reinitialising of those on the recycle lists
+
+  These last few can cause the mud to crash horribly, but the code will
+compile fine.  It is therefore important to remember that just because the
+code compiles that it is not necessarily correct.  More insiduous is the
+fact that overrunning an array boundary for example, may not crash the mud
+when it happens, but some time later, making the problem even trickier to
+find. 
+
+
+4.4  My code won't compile..why?
+
+These are some of the more 'popular' gcc error/warning messages and
+possible causes: 
+
+4.4.1  'Parse error..'
+
+The compiler found a symbol that it wasn't expecting.. for example, an
+extra paren on a complex if check, a semicolon placed after a function
+body header, a semicolon omitted from the previous line amongst others.
+The error is not always on the line mentioned by gcc, but may be the
+previous line. 
+
+4.4.2  'Assignment makes integer from pointer without
+a cast..'
+
+This error arises when you assign a pointer to a non-pointer variable..
+for example: 
+
+int I = NULL ;
+or
+CHAR_DATA ch, *vch ;
+  ch = vch ;
+
+4.4.3  'Implicit declaration of
+function..'
+
+You have tried to use a function that the compiler has no definition of. 
+His can arise if you mistype the function name, haven't included a
+necessary header file, or simply haven't coded the function yet. 
+
+4.4.4  '.. declared here - not in a
+function'
+
+This error arises when you are using a variable that hasn't been defined. 
+This can be due to a typo or forgetting to declare the variable
+previously. 
+
+4.5  But why can't I just ignore warnings?
+
+Because though they don't stop your code compiling, they can indicate code
+problems that may very well crash the mud once running.  It's probably a
+good idea to get rid of all warnings unless you know exactly what you are
+doing.
+
+
+
+4.6  What options may I want to add to the
+Makefile?
+Lots are available.  Look at the documentation for full lists of available
+bells and whistles, but commonly used additions to the c_flags are: 
+-Wshadow - warn if a variable is declared that shadows another
+
+-Wstrict-prototypes - enforces stricter function prototyping, no more fn()
+; nonsense. 
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 5 - TROUBLESHOOTING CRASHES
+
+
+
+This section will give a *brief* introduction to troubleshooting the cause
+of crashes on your mud, with much of the emphasis on gdb. It does not
+pretend to be a complete tutorial.  For that, read the gdb documentation,
+or for another quick-start guide, see the one on Whiplash's page, address
+in section 8.4 of this document.
+
+5.1  My mud crashed..why?
+
+There are very many reasons your mud crashed, and if you plan to run your
+mud seriously, you really need to learn how to find out the cause of the
+problem, and then address it.  Common sense is a very powerful weapon in
+this hunt, if, for example, your mud was running fine then started
+crashing often immediately after you added some new code, this new code
+should be your first suspect as to the cause of the crash.  Even if the
+code looks right and compiles error free, it may be overrunning an array,
+trying to dereference a non-initialised pointer, or all manner of fun
+stuff.  It may also be reacting in unexpected ways with existing code.
+This point is one that you won't be able to discern immediately, the only
+way to evaluate this is familiarity with the general ROM code which can
+only come with time.
+
+
+Crashes can also be caused by areas when the mud boots, due to
+unterminated strings, wrongly placed values, attempts to reset a
+non-existent object amongst others.  Generally this type of problem is
+easier to find, as it is most often the case that the mud detects the
+problem, writes a message to the log file and then quits running.
+
+5.2  Working with log files.
+
+The importance of frequently monitoring your log files cannot be
+overstated.  If your mud crashes, the first thing you should do is look at
+the end of the most recent file.. or if the mud has restarted, the
+penultimate file.  Remember that the log files are numbered sequentially
+from 1000.log upwards.  A very useful tool here is the unix 'tail'
+command, which displays the last page of a file.  So, if after a crash you
+turn to your log directory to see the files:
+1000.log  1001.log 1002.log 1003.log
+and you know the mud has restarted, typing 
+tail 1002.log
+will show you the last things the mud logged before it crashed.
+
+Look at the end of the most recent file too, just to make sure you are
+looking at the correct file.
+
+
+There are a number of errors that cause the mud to terminate, and if one
+of these has happened you should get the bug message and have a good clue
+here how to fix the problem.  The next section talks of some commonly seen
+log messages, what they mean and what to do about them.
+
+5.3  Common log file messages
+
+  5.3.1 'File *.are line *: MAX_STRING *
+exceeded'
+
+
+This error will be seen at boot-time, and will cause the mud to abort and
+try again.  The problem is that you now have too many areas for the mud to
+hold in the space it has allocated for them.  To fix this, you need change
+the value of MAX_STRING, found in db.c, to something bigger than it
+currently is.  Incrementing in steps of 500,000 or so seems to be a
+frequently chosen step.
+
+5.3.2 'Loading playername'
+
+
+If this is the last entry in a logfile and the mud crashed after this,
+this is a good sign that the playerfile in question has been corrupted.
+You should look at the file with a text editor, but most often you will
+need to delete the pfile and restore from a backup.  You do make regular
+player file backups don't you? :)
+
+5.3.3 'fread_*: bad format'
+
+
+Again found only at boot-time, this error is indicative of errors in an
+area file.  You should look carefully at the file, both at the line given
+by the bug message but also at the preceeding chunk..since the mud tries
+to interpret the file as it reads it, an incorrect value can mean that the
+mud staggers on for a while, wrongly interpreting some values until
+finally it gets to something it can't meaningfully resolve.  Compare the
+file with another 'good' file for comparison, and try to get to learn
+generally how each section should look.
+
+5.3.4 '* : no such *index'
+
+
+This boot-time error says that a vnum was given for a room, mob or object
+that doesn't exist.  This is most often found in the resets section of an
+area file.  Edit the file, and if the error is obvious, eg 1001 instead of
+101, change it, or if you can't work out what value should be there, you
+may have to delete the reset.  Note that you need to be careful here.. 
+deleting a mob reset 'M' means you also have to delete all the 'E' and 'G'
+resets following it, and likewise deleting a 'O' reset means any 'P'
+resets following it will need removed also.  It is therefore very much in
+your best interests to resolve the problem before going butchering with
+your text editor. 
+
+5.3.5 'Init socket: bind: Address already in
+use'
+
+
+This error can arise when you have inadvertently ran your startup script
+twice.  The first should boot the mud properly, but the second will fail
+with this message, and will continuously try to restart the mud, quickly
+resulting in lots and lots of such files.  This problem gets particularly
+ugly if the mud is failing to boot, as you then get both startup's in an
+endless cycle of either failing to boot due to some other error or because
+of the other mud trying to startup.  To save your sanity, you need to kill
+at least one of the startup's, and then try diagnosing any other problem
+from there.
+
+On a unix system, type
+ps -ux (or ps-uYOURUSERNAME on SunOS)
+to get a list of your running processes.  Kill the startup that has the
+pid furthest from that of your rom process, if you can discern this.  For
+clarity you may be safer killing both, then shutdown from within the mud,
+then restarting a single startup.
+killall -9 startup
+should achieve the suitable effect here.  But don't try that on Digital
+Unix... it interprets 'killall' quite literally.
+
+
+
+Another possibility here is that the port you are trying to run the mud on
+is being used by a system service or another user.  If this seems to be
+the case, consult your system administrator.
+
+
+5.3.6 'ER &lt;mob&gt; &lt;object&gt;'
+
+This error is logged when the mud sees a mob being reset with a piece of
+equipment that is significantly higher in level than that of the mob.
+This won't stop the mud from booting, but it is perhaps to look closely at
+the mobs and objects in question, as potentially powerful objects are
+being made easy to get by popping on weak mobs.
+
+
+ 5.4  What
+is GDB? 
+
+Many thanks to  Erwin Andreasen 
+for his contribution to the GDB related questions.
+
+
+GDB is the GNU debugger, a tool you can use to help determine code
+problems.  It is very powerful with many options, but is initially
+daunting.  Time spent getting familiar with GDB may well be the most well
+spent time for a mud admin.  It is usually installed on any system running
+GCC, but if not can be obtained from:  http://www.gnu.org
+
+Note that the gdb shipped with slackware 96(*** 95?)  was broken..if you
+run this OS and gdb doesn't work you need to get a new one.  The error
+that indicates this is akin to 'cannot fetch registers.. wrong format'.
+
+5.5  Do I need GDB?
+
+
+In the immortal words - 'GDB is your friend.'.  It can be useful in very
+many ways, to determine why the mud crashed, to step through code as it
+runs to track variable values and basically do all any other fully
+featured debugger can do.  If your mud is crashing all the time, your
+options are either to spend many hours looking at any code you suspect may
+be wrong, or fire up gdb and quite possibly see straight away where the
+problem is.  It won't do this all the time, but it is essential for those
+occasions when you are stumped.  Conversely though, the best way to avoid
+bugs is to write your code more carefully, so it can be a compromise
+between using gdb when necessary but not relying on it to clean up your
+mess. 
+
+5.6  Can I use GDB on a corefile? How?
+
+
+Most definitely.  Using GDB this way is probably the most successful of
+it's uses for many people.  If you have a core file in your area
+directory, switch to that directory and type: 
+
+gdb -c core ../src/rom
+
+GDb will start, show some copyright information then show the last
+commands executed by the mud. 
+
+5.7  Can I attach GDB to a running mud? How?
+
+
+Yes, simply go to the area directory, and type:
+gdb ../src/rom &lt;pid&gt;
+
+Where &lt;pid&gt; is the process id of the running mud.
+
+.... the program will then run until it hits a breakpoint, it gets some
+signal like segmentation fault or until you press control-C.
+
+
+Once you are in the debugger again, the MUD is still running - gdb has
+just suspended the process and waits for your input. You can type CONT to
+continue, or you can examine variables.
+
+
+You can also step through the code line by line: using the S (step)
+command will execute one line, entering the function if there is one.
+Using N will also execute one line, but if there is a function call, it
+will be skipped.
+
+
+If you are in a function, but really are interested in what happens when
+you return from it, you can use "finish" to finish executing this function
+and return to the calling function.
+
+
+5.8  How do I start the mud from GDB?
+
+
+Switch to your area directory, and type 
+gdb ../src/rom
+
+Then type
+set args &lt;port&gt;
+
+where &lt;port&gt; is your port number the mud runs on. Then:
+run
+Alternatively, 
+run &lt;port&gt;  has the same effect as both of these steps.
+
+
+This starts the mud from within the debugger.
+
+Note that ctrl-z will not suspend gdb in this state, rather it will pause
+the mud. 
+
+
+5.9  What are breakpoints? How do I use them?
+
+
+A breakpoint is a marker you can put on a function, or a specific line of
+code.  When the mud arrives at that line or starts to execute that
+function, it halts and gdb gives you a prompt, allowing you to examine
+variable values, step through the code and so forth.  This can be very
+useful to follow through code that you want to check carefully.
+
+To add a breakpoint to a function, type:
+break &lt;fn_name&gt;  for example
+break do_say
+
+This will place a breakpoint at the beginning of the do_say function, and
+halt the mud when it reaches that part of the code.  Multiple breakpoints
+can be in place at once. 
+
+Type  
+info break
+to list all breakpoints, and use the delete command to remove them, for
+example 
+delete 1
+Will delete the first break point.
+
+5.10 OK.. the mud crashed and I've lots of info..now
+what? What does this GDB screen mean?
+
+5.11  Examining the stack
+
+
+The initial display gdb gives you should be the last few entries on the
+stack, which will each be at the place in the code where the next stack
+frame was called.  For example, if you type "vnum mob fido" in the mud,
+this will call the do_vnum function, which in turn calls do_mfind, which
+in turn will call get_mob_index.  If the mud crashes within get_mob_index,
+then your gdb display will have the line where the error occured in this
+function at the top of the stack display, the next line will be within
+do_mfind and the one below that will be In do_vnum. 
+
+It is possible to look at each of these stack 'frames' in turn, examining
+variable values and looking at what exactly the code was doing at that
+point. 
+
+Typing 'bt' at any time will show the stack display, and you can move up
+and down a frame at a time using the 'frame' command.  The 'where' and
+'list' commands are also extremely useful. 
+
+Sometimes you can get some unreadable stack traces. This is usually caused
+by a stack overflow :
+
+If you notice that the addresses of the functions seem to have each byte
+within 0x20 - 0x80, you might be able to track down where this happens.
+E.g. if you have gdb claiming that the top function has address
+
+0x666f6f74
+
+you can print out each byte as a character:
+
+(gdb) p /c 0x66
+
+and find that the address seem to contain letters "foot" - perhaps you
+just added some foot-sweat code that is overflowing a buffer.
+
+
+5.12  Examining the value of variables
+
+
+When in a stack frame, you can see what local variables are in scope by
+typing 'info locals'.  This will show the variables and their type, and
+their value/memory address.  You can use the 'print' command to examine
+these in more detail.  For example, to see the name of the CHAR_DATA named
+ch, you would do:
+
+  print ch->name or p ch->name 
+
+You can dereference pointers in this way just as you would do in code, and
+thus can look at all items in a list among other things. 
+
+Once you have printed a variable, you can then refer to it with the $
+symbol, which can be very useful for traversing a linked list among other
+things. Example :
+p *list_head
+p *$->next
+p *$->next
+This is obviously much easier than :
+p *list_head->next->next->next
+Note that using '*' dereferences a pointer, thus while 
+p ch
+Will show the address of the pointer, 
+p *ch
+Will show the value of the structure it points to.
+
+Note that you can recall and edit previous commands using the cursor keys.
+
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 6 - Other Utilities
+
+
+
+6.1  What is grep? Is it useful?
+
+In the equally as immortal words, "grep is your friend too".  The standard
+Rom distribution is 45,000 lines of code, and grep is the most widespread
+utility to do searches on all the files.  Typing "man grep" on a unix box
+is a good start, as it can do some quite nifty things.  But for starters,
+
+:  grep MAX_LEVEL *.h - find which header files MAX_LEVEL is defined/used
+in.. case sensitive
+
+grep -i do_tell *.c - find which source file has the do_tel function..
+case insensitive due to the -I switch
+
+grep -c class merc.h - Count the number of times the string 'class'
+appears in merc.h.. case sensitive due to no 'i' switch
+
+plus many more.. read the manual.
+
+
+6.2  What about Perl?
+
+Perl is probably of limited use in the overall scheme of running a mud,
+but can provide quite useful administration facilities.  It is far from
+infrequent to see people with perl scripts to do various things with
+player files, such as cleaning out the directory of unwanted files and
+such.  Other similar utility applications have had perl scripts used for
+them.  The advantage of perl is that it allows you to write a quick script
+that can do quite sophisticated processing, but it is perhaps not suited
+to much larger uses.
+
+
+Perl is especially suited for text manipulation. For example, to replace
+the string "armor" with "armour" in several files, you need but to do
+this:
+
+perl -pi~ -e 's/armor/armour/g' file1 file2 file3
+
+This edits the three files in place, leaving a backup in file1~, file2~
+etc.
+
+
+6.3  What is profiling?
+
+One of the concerns a mud administrator rightly has is the amount of
+computer resources the mud is hogging.  Maybe the machine hosting the mud
+is low spec, maybe it's a site where resources are limited by policy, or
+maybe it's just the admin being conscientious.  As mentioned in an earlier
+section, Rom has ram, hard disk and cpu considerations.  Disk space
+usually isn't a problem since it's so cheap for massive storage nowadays,
+ram is considered to be hard to optomise since it's usage comes mainly
+from areas, so a frequent favourite choice for efficiency is the cpu
+usage.  There is a technique known as profiling, by which you recompile
+the mud with certain switches added, let it run for a while and after
+shutting it down you get a file showing how much of the cpu time was taken
+up by every function in the mud. 
+
+6.4  How do I profile my mud?
+
+1.  Add '-pg' to the c_flags in your Makefile
+2. Do a clean recompile.. ie delete all .o files and do 'make'
+3. Reboot your mud
+4. Let the mud run for a while, a day or two at least, then shutdown..it's
+important you shutdown, the mud needs to exit cleanly
+5. Go into your area directory and type 'gprof'
+6.  Peruse the information
+
+6.5  What can I do with the profile
+information?
+
+To be blunt, not much.  Many people get the idea that they can greatly
+increase the efficiency of the code, then find out the hard way that
+speeding up most functions in the code by a *significant* amount is far
+from an easy task.  What profiling can do is show you just how your mud is
+using it's time, and perhaps by this you'll see some function that
+shouldn't be a hog using an inordinate amount of cpu time.  What you
+probably will find is that the *_update() functions use the majority of
+the cpu time, and these are already quite well optomised.  Note that if
+you try to profile the mud and only let it run for a short time, you will
+see the functions used a lot during bootup (such as fread_string and such) 
+using much more of the resources than they actually do once the mud is up
+and on it's feet. 
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 7 - Common coding queries
+
+
+
+7.1  How do I change the levels on my mud?
+
+Carefully.  You need to bear in mind before doing this that simply
+changing the max_level won't do it..you need to look at how levels affect
+combat abilities, default mob values and all sorts of subtle facets of the
+mud.  After that, then: 
+
+1.  In merc.h, change the value of MAX_LEVEL to what you want, and any
+other defined level value that you need to alter.. eg if you will have 20
+imm levels or whatever. 
+
+2.  Grep your source for any occurrence of the old MAX_LEVEL value..there
+are a few places this is hardcoded numerically.  
+
+3.  In the command table in interp.c, look at the commands and see if your
+imm structure now needs any of the levels changed for commands. 
+
+4. The fun part.  In const.c, go through the skill_table, and change for
+every skill the level at which every class now gets the skill/spell.  You
+may not need to do this for all cases, but take careful note of how skills
+unavailable to a class are set to the lowest imm level..if you now have
+more mortal levels than this all these values will need to be changed.  If
+you go over 100 levels, make sure to change the value of the 'reserved'
+slot, as bad things can happen otherwise.
+
+5. Do a clean compilation (delete all .o files and do 'make') and restart
+the mud. 
+
+6. If all is well, this is the basics of adding more levels.. other points
+you may have to address are: 
+  - if keeping pfiles handling old imms..either advancing by hand, or
+incrementing your pfile version and handling the change in save.c
+
+.  - changing area files, to change mobs stats, obj stats, and generally
+trying to keep the area re-balanced.  Refer to previous note on the combat
+system.
+
+7.2 How do I add a new class? 
+
+1.  Increment MAX_CLASS in merc.h
+
+2. Add a entry for the class in the class_table in const.c
+
+3. In the pc_race_table in const.c, add the experience point modifier for
+each race for the new class. 
+
+4. In the group_table? Set up groups of skills/spells for the class
+
+5. In the skill_table in const.c, add a value for the class to each
+skill/spell to specify which level the class will get that skill at.
+
+6. Add new titles to the title_table in const.c so the class gets a new
+title each time they level.
+
+7. Clean recompile and reboot.
+
+7.3  How do I add a new race?
+
+1.  In merc.h, increment MAX_RACE
+
+2. In const.c, add a new structure to the pc_race_table for the new
+race
+
+3. In const.c also, add an entry in the race_table for the new race. *make
+sure it is in the same position as it is in the pc_race_table* Adding It
+after the last current pc race can help ensure you do this. 
+
+4. Clean recompile and reboot
+
+7.4  How do I add a new clan?
+
+1.  Increment MAX_CLAN in merc.h
+
+2. In tables.c add a new entry for the clan in the clan_table.
+
+3. Clean recompile and reboot.
+
+7.5  How do I add a new skill or spell?
+
+The procedure for adding a new skill or spell is generally similar, in
+that you need to write the actual code that actually carries out the
+skill/spell in question and then also make appropriate definitions to
+other files so that the addition can be integrated into the existing
+system.
+
+For skills:
+
+1. Write the function holding the code for the skill, placing it in the
+most appropriate file, usually act_*.c or fight.c
+
+2. In const.c, put an entry in the skill_table for the skill
+
+3. In interp.c, add a line so the mud knows which command triggers this
+skill
+
+4. In interp.h, do a DECLARE_DO_FUN( skill_name )
+
+5. Recompile and reboot
+
+For spells:
+1. Write the code for the spell, placing it usually in magic.c or
+magic2.c
+
+2. In const.c, add an entry to the skill_table for the spell
+
+3. In magic.h, do a DECLARE_SPELL_FUN( spell_name ) ;
+
+4. Recompile and reboot
+
+7.6  How does the command table work? How do I add a new
+command?
+
+The command table holds the required attributes for every command anyone
+can type, the text they type, the function that holds the code to be
+executed, the level they can do it at, the position they must be in to do
+it, how and when to log it and so on. 
+
+
+When input is received from the player, the mud starts at the top of the
+table and sees if what they have typed can be matched against any of the
+entries in the table.  Thus if they typed 'exam fido', the mud would go
+through the table, comparing every entry against the word 'exam' either
+until a match is found, or until the entire table is searched.  Two things
+are of note here.  Firstly, for efficiency, the most commonly used
+commands are first in the list, which is why you see the movement commands
+before anything else.  When adding a new command therefore, think
+carefully of how often it is used, and try to place it accordingly.  You
+will notice the table is generally grouped into combat commands,
+informational commands and such, so finding an appropriate place isn't
+terribly difficult.  The second consideration comes from the fact that the
+mud will allow you to type abbreviations for a command..thus 'n' executes
+the 'north' command, not 'notell'.  Again this requires careful
+positioning of commands..  it's quite easy to place a command in the table
+only to realise you've made it so that a frequently used contraction now
+executes this command instead. 
+
+
+The ROM code as did Merc before it uses a convention whereby all functions
+that are written to execute a player-typed command are named do_*, such as
+do_say, do_kill or do_cast.  It is important to keep this in mind, as more
+importantly, all do_ functions must have the same signature, that
+being
+
+void do_*(CHAR_DATA *ch, char *argument) ;
+
+
+7.7  Why does the mud crash when I type 'who
+hjhjkhg'?
+
+You have an incorrect value for either MAX_CLASS, MAX_RACE, or MAX_CLAN in
+merc.h.  If one of these values is larger than it should be, someone
+typing 'who jhhjhgk' will have the mud go searching into places it
+shouldn't go, with predictably dire results.
+
+
+7.8  My players are levelling from 1 to hero after one
+kill..what's going on?
+
+
+You haven't set the exp modifier for their class in the pc_race_table. 
+Because this is declared as an array, forgetting to do it for a new class
+will effectively mean they need 0 xp per level.  One kill therefore, will
+take them to the maximum level achievable by killing mobs.
+
+
+7.9  Why do my mobprogs suddenly stop
+working?
+
+If you are using the mobprogs by Newt, there is an error checking routine
+that can sometimes cause all mobprogs to stop working until the next
+reboot.  In program_flow(), there is a variable used to detect the level
+of call nesting of mobprogs, which is intended to stop mobprogs which call
+each other in an infinite loop.  This variable is increased once the
+function is entered, and decreased at the end of the function, but the
+problem lies in the routes taken through the function by a bad mobprog.
+If the function detects a problem with the mobprog, and returns from it
+without reaching the end, the variable isn't decremented, and once this
+happens 5 times all mobprogs mud-wide cease being executed.  If you see an
+error in your log file of the format:
+Mobprog: max_call_level exceeded
+ Then this is indicitive of this problem.
+
+
+The solution is to go through the program_flow() function, and add a 
+call_level-- ;
+Before anywhere where there is a 'return' statement.  You probably want to
+do this instead of just disabling the check as someone will build looping
+mobprogs if you do.
+
+
+
+7.10  How do I add more flags past 'ee'?
+
+You can't simply just start defining 'ff', 'gg' and so on.  The flags in
+Rom are held in 32 bit variables, so trying to assign values larger than a
+32 bit number can hold isn't going to work very well.  Note that 64 bit
+machines may not suffer this limitation, it will depend on what the
+compiler allocates for the variables.
+
+
+There are a number of solutions to the problem, ranging from redefinition
+as 'long long', restructuring the flag variables as bit arrays and the
+most common, which is to simply add a new field for the additional flags.
+In this way, you will have a new field in the appropriate structures for
+'act2', 'affect2' or whichever you need.  You will need to add new
+functions for setting and checking these new variables, but it is largely
+an exercise in copying what is already there.  If you're careful you can
+add as many new fields as you need and keep it totally transparent to
+players, imms and builders alike.  There is at least one snippet for this
+available, and searching the Rom archives should yield a few past
+discussions.
+
+
+7.11  Why don't objects reset to the room?
+
+To stop players simply staying in an area and collecting vast amounts of
+loot through object resets, 'o' and 'p' resets will not function to the
+room if the area has any players in it.  Thus, if a 'o' reset is set to
+load a pile of gold into a treasure room and a player picks it up, no
+matter how long the player waits in the area, area resets will not repop
+that object to the room.  Once the player leaves the area, the object will
+repop on the next area reset.  This check can be removed in the reset code
+in db.c if you feel it is sufficiently necessary.
+
+
+ 7.12  How do I increase my number of possible
+vnums?
+
+Firstly, do you really need to?  Rom as is gives you 32k vnums, and there
+are precious few muds with that many rooms, mobs or objects.  If you do
+need this though, it will require a fair amount of code changing, all of
+which though is the simple act of changing the declaration of the 'vnum'
+field in the structures that have it to a 'long'.  This will give you a
+few billion vnums.  You will also need to change those functions that
+directly access vnums, as they may assign a vnum to a local variable whose
+type will also need changed.
+ 
+
+ 7.13  Why can't I see much while switched into a
+mob?
+
+After adding mobprogs, some people find that when switched into a mob they
+don't see a lot of the mud text, most notably communications channels.
+The cause of this is the code added to the 'act' function, to check for an
+ACT trigger on a mob.  The code returns from the function if the mob
+doesn't have such a trigger, but doesn't take account for a switched imm.
+Add a clause to the 'if' check to return only if the mob has no descriptor
+and this problem should go away.
+
+
+ 7.14  How do I add additional colours?
+
+In short, you don't.  The ANSi colour codes used to display colour on
+terminals specify only eight colours, with bold versions of each, and a
+number of other control sequences.  You cannot simply add a bunch of new
+codes, the standard does not support it.  You will even find massive
+variations in how different terminal programs handle the 'official' codes,
+so even by using these you are not guaranteed to have them display
+correctly on every users screen.
+
+
+ 
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
+
+Section 8 - Other Resources
+
+
+
+This section contains pointers to other locations of information that
+should be useful.  Some of these will be for the newcomer to Rom, others
+will have information of use to all levels of experience.  
+
+
+It may sound obvious, but check out the sources of information you have at
+your fingertips but easily forget about first before looking farther
+afield.
+Most UNIX commands have a man page, accessible by using man .
+this typically lists all of a command's options. All library functions and
+system calls (e.g. fopen, gettimeofday) also have a man page. If you are
+looking for something and are unsure of what it's called, you can use man
+-k to search for all pages whose description contains that word, e.g. "man
+-k time".
+
+
+If you are using GNU utils, the online documentation may be in a different
+format which can display information in a hyperlinked format.  This is
+known as info, and you can get help on it by simply typing:
+info
+
+To go directly to the information about gcc, type:
+info gcc
+
+
+
+8.1  The ROM mailing list.
+
+
+The Rom list is administered by Brian Moore, and you can subscribe to it
+by mailing
+
+rom-request@rom.org
+with a blank subject and the following in the mail body:
+subscribe rom
+
+The list is immoderated, though attempts are made to keep the posts on
+topic.  If you plan to run a Rom mud for any length of time, this forum is
+a extremely useful source of information.  Posts in HTML are sent to the
+bit bucket, you  have been warned.
+
+
+There is an archive of the last few months postings to the list at:
+http://dragon.kdi.com/~infinite/romlist
+And an additional one at :
+http://aasen.dyn.ml.org/rom/index.html
+
+8.2  The merc-l mailing list.
+
+
+This list is aimed at Merc based muds, therefore many questions you have
+about Rom are not appropriate here if it is Rom specific.  Traffic on it
+has dropped somewhat recently.  Subscribe by mailing
+majordomo@webnexus.com 
+with a blank subject and the following in the body:
+
+subscribe merc-l
+
+
+8.3  Usenet newsgroups
+
+
+There are quite a few usenet mud related groups.  Alt.mud is one, though
+the two most useful are probably:  rec.games.mud.diku - aimed at diku
+based muds rec.games.mud.admin - for mud administrators, for all mud
+bases, not just diku
+
+Additionally, rec.games.mud.announce is useful as announcements of mud
+openings and such are posted here. Note that this a moderated group, and
+if you wish to advertise here you can do so only once a month. 
+
+8.4 Learning the C Programming Language
+
+This section gives some information on finding answers to questions that
+more generally relate to C programming than running a ROM mud in
+particular.  It isn't in the scope of this FAQ or the ROM list to act as a
+beginner's class in C programming, so these resources should be checked
+out for answers if it's a C problem that has you stumped.
+
+
+Many thanks to Shad Muegge for
+dropping this into my mailbox one day and making it a happy morning.
+
+
+ 8.4.1  How do I learn more about
+programming in C?
+
+You want to learn how to program C by working on a ROM server,  but
+you don't know where to get started.  This section describes different
+resources available to help you get started.
+
+
+You learn to read and write any language by reading and writing in
+that language.  This is just as true for learning a programming
+language.  So, if you have a C programming question, pull up the ROM
+code and try to find an example in the code (it is probably there).
+
+
+Other resources for answers include books (8.4.2), the C programming
+FAQ (8.4.3), and usenet discussion groups (8.4.4).
+
+
+You have picked a fun way to learn C programming.  Have fun!
+
+
+8.4.2 Which C programming book should I get?
+
+K&amp;R invented the C language and they have written books!  Their book
+is not the easiest from which to learn C programming, but it will be
+invaluable as a reference during your entire C programming career. 
+The C Programming FAQ (8.4.3) offers more suggestions.
+
+
+Brian W. Kernighan and Dennis M. Ritchie, The C Programming Language,
+Second Edition, Prentice Hall, 1988, ISBN 0-13-110362-8,
+0-13-110370-9. [K&amp;R2] 
+
+
+
+Lantham also recommends :
+The Waite Groups New C Primer Plus	Sams Publishing
+
+
+
+Feydrex makes these
+additional comments about useful books.
+
+
+
+I'd also suggest having some unix type books on the list too.  I dunno
+what I would have ever done without them when I first bought them. 
+  'Linux In A Nutshell' from O'Reilly &amp; Associates, Inc. is a GREAT
+reference book to have for every Linux user.
+  'Unix In A Nutshell' also from O'Reilly &amp; Associates, Inc. is a great
+reference book for those using System V or Solaris 2.0.
+
+
+8.4.3 I can't find the answer in my book where do I go
+now?
+
+Steve Summit maintains the "C Programming FAQ" which answers many of
+the common problems encountered by beginners and experienced
+programmers.
+
+http://www.eskimo.com/~scs/C-faq/top.html
+
+
+Gary McNickel  adds:
+
+Ok, found it... For all you newbie coders out there, and heck, for all
+of us... here's a great C reference page...
+
+www.eg3.com/softdv/clang.htm
+
+
+8.4.4 I can't find the answer in my C book or the FAQs
+where do I go
+now?
+
+
+There are usenet discussion groups dedicated to the C programming
+language.  These are the best places to ask general C questions (but
+check the FAQ (8.4.3) first.  These newsgroups are intended for C
+language discussion only, if you have problems with a C compiler check
+for discussion groups  for that specific compiler. Also, this would
+not be the place to ask how to add a spell to ROM (check this ROM FAQ
+for those kinds of questions).
+
+
+C programming language discussion groups
+
+comp.lang.c
+comp.lang.c.moderated
+
+GNU C Compiler discussion groups
+
+gnu.gcc.*
+
+Microsoft discussion groups
+
+microsoft.public.*
+
+If you don't have access to a NNTP server, then check
+
+http://www.dejanews.com
+
+
+8.5 WWW pages and ftp sites
+
+The largest ftp repository of mud related information, code bases, clients
+and all kinds of goodies is at:
+ftp://ftp.game.org
+
+If you are looking for something mud-related, this should be an early stop
+on your list.
+
+Over time, a number of sites have been set up with more specific aims than
+game.org, and the following list provided by Lantham
+contains many sites with Rom specific
+information.
+
+http://darkoth.mudservices.com
+http://rep.mudservices.com 
+http://www.abandoned.org/drylock
+http://www.algonet.se/~rnen/
+http://www.solace.mh.se/~ant/mud.html
+http://www.algonquinc.on.ca/~mcco0055/
+http://www.geocities.com/SiliconValley/Pines/9618    in Spanish
+http://www.goodnet.com/~esnible/mudinfo.html
+http://www.goodnet.com/~esnible/mzf.html
+http://www.ecoledoc.lip6.fr/~despret
+http://www.citynet.net/personal/silverhand/kermit/mud/main.htm
+http://www.sonic.net/~amroth/mud/
+http://www.ncinter.net/~bert/mud/
+http://www.concentric.net/~Clogar
+http://www.clandestine.bcn.net
+http://cerberus.uab.es/~yago/snippets.shtml
+http://129.137.120.5:/razor.html
+    or (_if_ my dns entry works outside campus, and only IF)
+    http://void.rwc.uc.edu/razor.html
+
+
+
+Area Snippets
+http://www.eng.usf.edu/~jmurphy
+(  You can also test out a lot of these areas at the mud address below.
+   --=[ jmurphy@eng.usf.edu ]=--                        
+   Infernal Realms Wurm Based MUD.
+   131.247.1.93 9000  )
+
+
+
+Old ROM mailing lists
+http://www.citynet.net/personal/silverhand/kermit
+
+
+ROM for windoz
+Get both files from ftp://game.org/pub/mud/diku/merc/rom/windows
+
+Alternatively :  
+http://home.att.net/mkw/mudframe.html
+Or also 
+http://www.netrover.com/~nafiel/rom/howto5.html
+
+
+Merc Programmers Webring
+http://www.webring.org/cgi-bin/webring?ring=merc;list
+
+ Sites for finding coders/builders 
+http://www.games-etc.com
+http://www.mudconnector.com/discuss/discuss.cgi
+
+Make Zones Fast (MZF) can be found at:
+    http://www.goodnet.com/~esnible/mzf.html
+
+MudMate can be found at:
+    http://www.cyberus.ca/~peregrin/
+
+
+Romlama
+http://romlama.mudservices.com
+
+Old - possibly out-of-date addresses.  These are ones
+that were good at one time, but now no response.  If
+knows what happened to any of these ... please let me know:
+
+http://jessi.indstate.edu/users/ryouga/code/romcode.html
+http://deadland.asu.net/~dland/mud/.html
+http://www.termfrost.org/~whiplash
+    ( closed now - and prolly gonna be members only if it opens)
+
+
+Main Rom Page Index 1 2 3 4 5 6 7 8
+
+
+
+
